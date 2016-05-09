@@ -1,0 +1,68 @@
+<template name="account">
+  <div class="page about">
+    {{> nav title='Mon compte' black=true}}
+
+    <div class="content-scrollable">
+
+        {{#if currentUser}}
+
+            {{#if actif}}
+
+                <div class="">Mon compte</div>
+
+            {{else}}
+
+
+                <div class="tab-form-wrap" role="tabpanel">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#one" aria-controls="one" role="tab" data-toggle="tab">1</a> Step One</li>
+                        <li role="presentation"><a href="#two" aria-controls="two" role="tab" data-toggle="tab">2</a> Step Two</li>
+                        <li role="presentation"><a href="#three" aria-controls="three" role="tab" data-toggle="tab">3</a> Step Three</li>
+                        <li role="presentation"><a href="#four" aria-controls="four" role="tab" data-toggle="tab">4</a> Step Four</li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="one">
+                            <fieldset>
+                                <span class="input-label">Full name</span>
+                                <input class="input-clear" type="text" placeholder="">
+                            </fieldset>
+                            <!-- Error Message Example -->
+                            <fieldset class="validation-error">
+                                <span class="input-label">Error Message</span>
+                                <input class="input-clear" type="text" placeholder="Placeholder">
+                            </fieldset>
+                            <fieldset class="custom-dropdown">
+                                <span class="input-label">Label</span>
+                                <select class="input-clear">
+                                    <option>Sherlock Holmes</option>
+                                    <option>The Great Gatsby</option>
+                                    <option>V for Vendetta</option>
+                                    <option>The Wolf of Wallstreet</option>
+                                    <option>Quantum of Solace</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="two">2</div>
+                        <div role="tabpanel" class="tab-pane fade" id="three">3</div>
+                        <div role="tabpanel" class="tab-pane fade" id="four">4</div>
+
+                        <a href="#" class="blk-btn btnNext">next step</a>
+                    </div>
+                </div>
+
+            {{/if}}
+
+        {{else}}
+
+            <div class="">Connexion</div>
+
+        {{/if}}
+
+    </div>
+
+  </div>
+</template>

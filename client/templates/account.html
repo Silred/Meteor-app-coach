@@ -9,6 +9,7 @@
             {{#if actif}}
 
                 <div class="">Mon compte</div>
+                <div class="niveau">{{niveau}}</div>
 
             {{else}}
 
@@ -52,13 +53,29 @@
 
                         <a href="#" class="blk-btn btnNext">next step</a>
                     </div>
+
+                    <button class="logout">Deconnexion</button>
+
                 </div>
 
             {{/if}}
 
         {{else}}
 
-            <div class="">Connexion</div>
+            <div class="overlay auth">
+                <a href="#" class="js-close-overlay overlay-dismiss"><span class="icon-cross"></span></a>
+
+                <form>
+                    <input type="email" name="email" placeholder="email" /><br />
+                    <input type="password" name="password" placeholder="password" /><br />
+                    <input type="submit" name="action" value="logIn"/>
+                    <input type="submit" name="action" value="signUp"/>
+                </form>
+
+                <button class="js-signin btn-facebook">Connexion avec Facebook</button>
+
+                <button class="js-signin btn-twitter">Connexion avec Twitter</button>
+            </div>
 
         {{/if}}
 

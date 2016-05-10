@@ -2,14 +2,22 @@
 
 /* 2. Global styles */
 body {
-    background: url(http://wiebec.files.wordpress.com/2012/01/wiebec-landscape2.jpg) no-repeat;
     /*background: #efefef;*/
     font-family: 'Open Sans', sans-serif;
-    color: #212121;
-    font-size: 16px;
-    background-size: cover;
 }
 
+.content-scrollable{
+    padding-top: 3em;
+}
+
+.auth{
+    padding-top: 3em;
+}
+
+
+.btn-facebook{
+    width: 100%;
+}
 /* 3. Form styles */
 
 input:focus,

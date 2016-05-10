@@ -3,13 +3,6 @@ Template.account.onRendered(function() {
     $(function() {
         var $this = $(this);
 
-        $('.btnNext').on('click', function() {
-            if(isLastTab())
-                alert('submitting the form...');
-            else
-                nextTab();
-        });
-
         $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
             isLastTab();
         });
@@ -28,39 +21,23 @@ Template.account.onRendered(function() {
 
     });
 
-    function nextTab() {
-        var e = $('ul[role="tablist"] li.active').next().find('a[data-toggle="tab"]');
-        if(e.length > 0) e.click();
-        isLastTab();
-    }
-
-    function isLastTab() {
-        var e = $('ul[role="tablist"] li:last').hasClass('active');
-        if( e ) $('.btnNext').text('submit');
-        else $('.btnNext').text('next step');
-        return e;
-    }
-
     });
 
 Template.account.helpers({
     actif: function() {
         return Meteor.user().programme.actif;
     },
-    recipeTitle: function() {
-        return RecipesData[this.recipeName].title;
+    niveau: function() {
+        return floor(Meteor.user().experience() % 1300); 
+    },
+    experience: function() {
+        return ;
     },
 
 })
 
 
 Template.account.events({
-    'submit form': function(event) {
-        event.preventDefault();
-
-        Meteor.user().programme.type = $('input[name="type"]').val();
-        Meteor.user().programme.actif = true;
-    },
 
     'click .logintwitter': function() {
         Meteor.loginWithTwitter();
@@ -72,5 +49,70 @@ Template.account.events({
 
     'click .logout': function () {
         Meteor.logout();
-    }
-})
+    },
+
+    'click .btnNext' : function() {
+    if(isLastTab())
+        alert('submitting the form...');
+    else
+        nextTab();
+    },
+
+    "submit form": function(e, template) {
+
+        var action = $('input[name="action"]').val();
+
+        if ( action == 'logIn'){
+
+            var user = $("input[name='email']").val();
+            var password = $("input[name='password']").val();
+
+
+            Meteor.loginWithPassword({
+                email: user
+            }, password, function(err) {
+                if (err) {
+                    alert(err.reason)
+                }
+            });
+        }
+        else if (action == 'signUp'){
+            e.preventDefault();
+
+            var email = $('input[name="email"]').val();
+            var username = email;
+            var password = $('input[name="password"]').val();
+
+            var user = {
+                username: username,
+                email: email,
+                password: password,
+
+            };
+
+            Accounts.createUser(user, function(err) {
+                if (err) {
+                    alert(err.reason);
+                } else {
+                    Router.go('home');
+                }
+            });
+        }
+
+    },
+
+
+});
+
+function nextTab() {
+    var e = $('ul[role="tablist"] li.active').next().find('a[data-toggle="tab"]');
+    if(e.length > 0) e.click();
+    isLastTab();
+}
+
+function isLastTab() {
+    var e = $('ul[role="tablist"] li:last').hasClass('active');
+    if( e ) $('.btnNext').text('submit');
+    else $('.btnNext').text('next step');
+    return e;
+}

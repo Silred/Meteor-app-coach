@@ -1,7 +1,10 @@
 Accounts.onCreateUser(function(options, user) {
-  var Programme = {actif : false};
+  
+  var Programme = {actif : false, objectif : "", disponnibilite : 0, notification : ""};
   var Recette = {actif : false};
+  var Experience = "0";
 
+  user.experience = Experience;
   user.programme = Programme;
   user.recette = Recette;
 

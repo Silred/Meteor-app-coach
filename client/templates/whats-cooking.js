@@ -1,8 +1,14 @@
-Template.feed.helpers({
-  activities: function() {
-    return Activities.find({}, {sort: {date: -1}});
+
+
+
+Template.trainings.helpers({
+
+
+  trainings: function() {
+      return Trainings.find();
   },
   ready: function() {
-    return Router.current().feedSubscription.ready();
+    return Router.current().trainings.ready();
+
   }
 })

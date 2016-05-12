@@ -1,25 +1,22 @@
-<template name="feed">
-  <div class="page whats-cooking">
+<template name="trainings">
+  <div class="page trainings">
 
-    {{>nav title="What's Cooking"}}
+    {{>nav title="All trainings"}}
 
     <div class="content-scrollable">
-      <div class="list-activities {{#unless ready}}loading{{/unless}}">
-        {{#if ready}}
-          {{#each activities}}
-            {{> activity}}
-          {{else}}
-            <div class="wrapper-message">
-              <div class="title-message">No one is cooking yet!</div>
-              <div class="subtitle-message">Share that you made a recipe and it will show up here.</div>
-            </div>
-          {{/each}}
-        {{else}}
-          <div class="wrapper-message">
-            <div class="icon-sync"></div>
-            <div class="title-message">Loading</div>
-          </div>
-        {{/if}}
+      <div class="list-trainings">
+
+        <script>
+          console.log(Trainings.find().count() + "azeaz")
+        </script>
+
+        {{#each trainings}}
+        <script>
+          console.log("qsqsqs")
+        </script>
+{{>training}}
+        {{/each}}
+
       </div>
     </div>
   </div>

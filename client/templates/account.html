@@ -10,7 +10,11 @@
 
                 <div class="">Mon compte</div>
                 <div class="niveau">{{niveau}}</div>
-
+                <div class="niveau">{{halal}}</div>
+                <div class="niveau">{{objectif}}</div>
+                <div class="niveau">{{actif}}</div>
+                <button class="js-signin  logout">Deconexion</button>
+                <button class="js-signin  modif">Modififer vos préférences</button>
             {{else}}
 
 
@@ -18,43 +22,47 @@
 
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#one" aria-controls="one" role="tab" data-toggle="tab">1</a> Step One</li>
-                        <li role="presentation"><a href="#two" aria-controls="two" role="tab" data-toggle="tab">2</a> Step Two</li>
-                        <li role="presentation"><a href="#three" aria-controls="three" role="tab" data-toggle="tab">3</a> Step Three</li>
-                        <li role="presentation"><a href="#four" aria-controls="four" role="tab" data-toggle="tab">4</a> Step Four</li>
+                        <li role="presentation" class="active"><a href="#one" aria-controls="one" role="tab" data-toggle="tab">1</a>Restriction alimentaire</li>
+                        <li role="presentation"><a href="#two" aria-controls="two" role="tab" data-toggle="tab">2</a>Objectif sportif</li>
                     </ul>
 
                     <!-- Tab panes -->
+                    <form>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade in active" id="one">
+
                             <fieldset>
-                                <span class="input-label">Full name</span>
-                                <input class="input-clear" type="text" placeholder="">
+                            <input name="halal" type="checkbox" id="halal" value="true">
+                            <label for="halal">Halal</label>
+                        </fieldset>
+                            <fieldset>
+                                <input name="casher" type="checkbox" id="casher" value="true">
+                                <label for="casher">Casher</label>
                             </fieldset>
-                            <!-- Error Message Example -->
-                            <fieldset class="validation-error">
-                                <span class="input-label">Error Message</span>
-                                <input class="input-clear" type="text" placeholder="Placeholder">
+                            <fieldset>
+                                <input name="vegetarien" type="checkbox" id="vegetarien" value="true">
+                                <label for="vegetarien">Vegetarien</label>
                             </fieldset>
-                            <fieldset class="custom-dropdown">
-                                <span class="input-label">Label</span>
-                                <select class="input-clear">
-                                    <option>Sherlock Holmes</option>
-                                    <option>The Great Gatsby</option>
-                                    <option>V for Vendetta</option>
-                                    <option>The Wolf of Wallstreet</option>
-                                    <option>Quantum of Solace</option>
-                                </select>
-                            </fieldset>
+                            <a href="#" class="blk-btn btnNext">next step</a>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="two">2</div>
-                        <div role="tabpanel" class="tab-pane fade" id="three">3</div>
-                        <div role="tabpanel" class="tab-pane fade" id="four">4</div>
+                        <div role="tabpanel" class="tab-pane fade" id="two">
+                            <fieldset>
+                                <input name="objectif" type="radio" id="maigrir" value="maigrir">
+                                <label for="maigrir">Maigrir</label>
+                            </fieldset>
+                            <fieldset>
+                                <input name="objectif" type="radio" id="muscler" value="muscler">
+                                <label for="muscler">Se muscler</label>
+                            </fieldset>
+                            <fieldset>
+                                <input name="objectif" type="radio" id="maintient" value="maintient">
+                                <label for="maintient">Maintenir en forme</label>
+                            </fieldset>
+                            <input class="submit-rest" type="submit" name="action" value="valide">
+                        </div>
 
-                        <a href="#" class="blk-btn btnNext">next step</a>
                     </div>
-
-                    <button class="logout">Deconnexion</button>
+                    </form>
 
                 </div>
 
@@ -66,10 +74,12 @@
                 <a href="#" class="js-close-overlay overlay-dismiss"><span class="icon-cross"></span></a>
 
                 <form>
-                    <input type="email" name="email" placeholder="email" /><br />
-                    <input type="password" name="password" placeholder="password" /><br />
-                    <input type="submit" name="action" value="logIn"/>
-                    <input type="submit" name="action" value="signUp"/>
+                    <label for="email">Email</label>
+                    <input type="email" name="email"/>
+                    <label for="email">Password</label>
+                    <input type="password" name="password"/>
+                    <input type="submit" name="action" value="logIn" id="login"/>
+                    <input type="submit" name="action" value="signUp" id="signup"/>
                 </form>
 
                 <button class="js-signin btn-facebook">Connexion avec Facebook</button>

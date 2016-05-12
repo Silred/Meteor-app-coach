@@ -35,4 +35,9 @@ Meteor.publish(null, function() {
       'services.twitter.profile_image_url_https': 1
     }
   });
-})
+});
+
+Meteor.publish("userData", function () {
+  return Meteor.users.find({_id: this.userId},
+      {fields: {'profile': 1}});
+});

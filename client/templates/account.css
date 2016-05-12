@@ -225,3 +225,146 @@ button:focus {
 .custom-dropdown::after {
     color: #9e9e9e;
 }
+
+label {
+    color: #888;
+    font-family: helvetica;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 8px!important;
+}
+
+form {
+    border-color: #dfdfdf;
+    border-width: 1px;
+    border-style: solid;
+    padding: 4.5%;
+    display: block;
+    position: relative;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.1);
+    background: white;
+    margin: 30px;
+    margin-top: 105px;
+}
+
+input[type='email'], input[type='password']{
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border-width: 0 0 2px 0;
+    border-color: #f1f1f1;
+    background: #f9f9f9;
+    outline: none;
+    padding: 15px 0 15px 10px;
+    font-size: 15px;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+input[type='email']:invalid, input[type='password']:invalid{
+    border-color: red;
+    background: #ffe5e5;
+}
+input[type='email']:hover, input[type='password']:hover{
+    border-color: #e1e1e1;
+    background: #f1f1f1;
+}
+input[type='email']:focus, input[type='password']:focus{
+    background: #e1f8f7;
+    border-color: #30c3c0;
+}
+
+input[type='submit']{
+    border-width: 0;
+    background: #f26e53;
+    color: white;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    font-size: 14px;
+    float: right;
+    outline: none;
+    outline: 0px;
+    letter-spacing: 1px;
+    -webkit-transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
+    margin-right: 20px;
+}
+
+input[type='submit']:hover{
+    background: #f05a3b;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+
+
+.tab-pane fieldset{
+    align-items: stretch;
+    flex-grow: 1;
+    flex-basis: auto;
+    display: flex;
+    padding: 0!important;
+    border: 0;
+}
+
+.tab-pane label{
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    background: #E8E8E8;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.tab-pane label:hover{
+    background: #D8D8D8;
+}
+
+.tab-pane input[type="checkbox"]{
+    visibility: hidden;
+    position: absolute;
+    cursor: pointer;
+}
+
+.tab-pane input[type="radio"]{
+    visibility: hidden;
+    position: absolute;
+    cursor: pointer;
+}
+
+.tab-pane input[type="checkbox"]:checked ~ label{
+    background: #00AD00;
+    color: white;
+    box-shadow: 0 .1rem .45rem 0 rgba(0,0,0,1);
+    transform: scale(1.25);
+    animation: checked 200ms 1;
+}
+
+.tab-pane input[type="radio"]:checked ~ label{
+    background: #00AD00;
+    color: white;
+    box-shadow: 0 .1rem .45rem 0 rgba(0,0,0,1);
+    transform: scale(1.25);
+    animation: checked 200ms 1;
+}
+
+.tab-pane form{
+    border-style: none!important;
+    padding: 0!important;
+    display: block;
+    position: relative;
+    box-shadow: none;
+    margin-top: 0 !important;
+}
+
+@-webkit-keyframes checked {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.25);
+    }
+}
+
+
+

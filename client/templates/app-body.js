@@ -21,6 +21,8 @@ Deps.autorun(function() {
 
 var notifications = new Mongo.Collection(null);
 
+
+
 Template.appBody.addNotification = function(notification) {
   var id = notifications.insert(notification);
 
@@ -169,4 +171,8 @@ Template.appBody.events({
       notifications.remove(this._id);
     }
   }
+});
+
+Template.account.onCreated(function(){
+  Meteor.subscribe('userData');
 });

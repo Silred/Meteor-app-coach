@@ -8,13 +8,65 @@
 
             {{#if actif}}
 
-                <div class="">Mon compte</div>
-                <div class="niveau">{{niveau}}</div>
-                <div class="niveau">{{halal}}</div>
-                <div class="niveau">{{objectif}}</div>
-                <div class="niveau">{{actif}}</div>
-                <button class="js-signin  logout">Deconexion</button>
-                <button class="js-signin  modif">Modififer vos préférences</button>
+                <div class="img-responsive  profile">
+                    <div class="niveau">{{niveau}}</div>
+                </div>
+                <div class="progress-wrap progress">
+                    <div class="progress-bar progress" style="width:{{experience}}"></div>
+                </div>
+
+                <div class="information">
+                    <div class="col-xs-3  niveau">
+
+                        {{#if muscler}}
+                            muslcer
+                        {{/if}}
+
+                        {{#if maigrir}}
+                            maigir
+                        {{/if}}
+
+                        {{#if maintient}}
+                            maintient
+                        {{/if}}
+
+                    </div>
+
+                    <div class="col-xs-3  niveau">
+                        {{#if halal}}
+                                halal
+                            {{else}}
+                                non-halal
+                        {{/if}}
+                    </div>
+                    <div class="col-xs-3  niveau">
+                        {{#if casher}}
+                            casher
+                        {{else}}
+                            non-casher
+                        {{/if}}
+                    </div>
+                    <div class="col-xs-3  niveau">
+                        {{#if vegetarien}}
+                            vegetarien
+                        {{else}}
+                            non-vegetarien
+                        {{/if}}
+                    </div>
+                </div>
+
+
+                <div class="stats">
+                    <div class="col-xs-4">{{compteur1}}</div>
+                    <div class="col-xs-4">{{compteur2}}</div>
+                    <div class="col-xs-4">{{compteur3}}</div>
+                </div>
+
+            <div class="buttons">
+                <button class="submit-rests  logout">Deconexion</button>
+                <button class="submit-rests  modif">Préférences</button>
+            </div>
+
             {{else}}
 
 

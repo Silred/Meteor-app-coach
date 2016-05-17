@@ -1,7 +1,3 @@
-Template.account.onCreated(function(){
-    Meteor.subscribe('userData');
-});
-
 Template.account.onRendered(function() {
 
     $(function() {
@@ -22,23 +18,39 @@ Template.account.onRendered(function() {
             .on('focusout', function() {
                 $this.parent().removeClass('focus');
             });
-
     });
 
-    });
+});
 
 Template.account.helpers({
-
-
 
     actif: function() {
        return Meteor.user().profile.Programme.actif;
     },
     niveau: function() {
-        return Meteor.user().profile.Experience;
+        return floor(25 + sqrt(625 + 100 * Meteor.user().profile.Experience)) / 50;
     },
-    objectif: function() {
-        return Meteor.user().profile.Programme.objectif;
+    experience: function() {
+        var tempNiveau = floor(25 + sqrt(625 + 100 * Meteor.user().profile.Experience)) / 50;
+        var tempExperienceFourchette = (25 * tempNiveau * tempNiveau - 25 * tempNiveau) - (25 * (1 + tempNiveau) * (1 + tempNiveau) - 25 * (1 + tempNiveau));
+        var tempExperience = Meteor.user().profile.Experience - (25 * tempNiveau * tempNiveau - 25 * tempNiveau);
+        
+        return tempExperience / tempExperienceFourchette *100;
+    },
+    maigrir: function() {
+        return Meteor.user().profile.Programme.objectif == "maigrir";
+    },
+    maintient: function() {
+        return Meteor.user().profile.Programme.objectif == "maintient";
+    },
+    muscler: function() {
+        return Meteor.user().profile.Programme.objectif == "muscler";
+    },
+    casher: function() {
+        return Meteor.user().profile.Recette.casher;
+    },
+    vegetarien: function() {
+        return Meteor.user().profile.Recette.vegetarien;
     },
     halal: function() {
         return Meteor.user().profile.Recette.halal;
@@ -79,7 +91,7 @@ Template.account.events({
         var user = {
             username: username,
             email: email,
-            password: password,
+            password: password
 
         };
 
@@ -138,7 +150,7 @@ Template.account.events({
             casher = false;
         }
 
-        
+
         if($('#muscler').prop('checked')){
             objectif  = $('#muscler').val();
         }

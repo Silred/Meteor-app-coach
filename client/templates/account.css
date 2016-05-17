@@ -226,6 +226,31 @@ button:focus {
     color: #9e9e9e;
 }
 
+.submit-rests{
+    border-width: 0;
+    color: white;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    font-size: 14px;
+    float: right;
+    outline: none;
+    outline: 0px;
+    letter-spacing: 1px;
+    -webkit-transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
+}
+
+.logout{
+    width: 42%;
+    background: #f26e53;
+}
+
+
+.modif{
+    width: 58%;
+    background: #aaaaaa;
+}
+
 label {
     color: #888;
     font-family: helvetica;
@@ -364,6 +389,14 @@ input[type='submit']:hover{
     100% {
         transform: scale(1.25);
     }
+}
+
+.buttons{
+    width: 100%;
+    min-height: 15px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
 }
 
 

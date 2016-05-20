@@ -6,14 +6,9 @@
     <div class="content-scrollable">
       <div class="list-trainings">
 
-        <script>
-          console.log(Trainings.find().count() + "azeaz")
-        </script>
-
+       <a href="{{pathFor 'addTraining'}}">Ajouter un entrainement</a><br>
         {{#each trainings}}
-        <script>
-          console.log("qsqsqs")
-        </script>
+
 {{>training}}
         {{/each}}
 

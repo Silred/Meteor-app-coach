@@ -17,7 +17,7 @@ Template.admin.events({
 
     alert('Saved latest news');
   },
-  
+
   'click .login': function() {
     Meteor.loginWithTwitter();
   }

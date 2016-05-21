@@ -6,6 +6,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+h4{
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .content-scrollable{
     padding-top: 3em;
 }
@@ -398,6 +403,7 @@ input[type='submit']:hover{
     position: absolute;
     bottom: 0;
 }
+
 
 
 

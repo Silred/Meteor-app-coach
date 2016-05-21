@@ -9,49 +9,61 @@
             {{#if actif}}
 
                 <div class="img-responsive  profile">
-                    <div class="niveau">{{niveau}}</div>
+                    <img class="img-responsive" src="{{profileimage}}">
                 </div>
                 <div class="progress-wrap progress">
+                    <div class="niveau">{{niveau}}</div>
                     <div class="progress-bar progress" style="width:{{experience}}"></div>
                 </div>
 
                 <div class="information">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4>Vos préférences</h4>
+                        </div>
+                    </div>
                     <div class="col-xs-3  niveau">
 
                         {{#if muscler}}
-                            muslcer
+                            <img src="img/objectif/muscle.png" class="img-responsive">
                         {{/if}}
 
                         {{#if maigrir}}
-                            maigir
+                            <img src="img/objectif/maigrir.png" class="img-responsive">
                         {{/if}}
 
                         {{#if maintient}}
-                            maintient
+                            <img src="img/objectif/maintient.png" class="img-responsive">
                         {{/if}}
 
                     </div>
 
                     <div class="col-xs-3  niveau">
                         {{#if halal}}
-                                halal
+                                <img src="img/restriction/halal.png" class="img-responsive">
                             {{else}}
-                                non-halal
+                            <img src="img/restriction/nhalal.png" class="img-responsive">
                         {{/if}}
                     </div>
                     <div class="col-xs-3  niveau">
                         {{#if casher}}
-                            casher
+                            <img src="img/restriction/casher.png" class="img-responsive">
                         {{else}}
-                            non-casher
+                            <img src="img/restriction/ncasher.png" class="img-responsive">
                         {{/if}}
                     </div>
                     <div class="col-xs-3  niveau">
                         {{#if vegetarien}}
-                            vegetarien
+                            <img src="img/restriction/vege.png" class="img-responsive">
                         {{else}}
-                            non-vegetarien
+                            <img src="img/restriction/nvege.png" class="img-responsive">
                         {{/if}}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4>Vos statistiques</h4>
                     </div>
                 </div>
 

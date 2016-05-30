@@ -44,6 +44,7 @@ button:focus {
     font-weight: 700;
 }
 
+
 .blk-btn {
     display: block;
     line-height: 50px;
@@ -256,6 +257,30 @@ button:focus {
     background: #aaaaaa;
 }
 
+#one fieldset{
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    height: 140px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+#one fieldset input[type=radio]{
+    left: 0!important;
+}
+
+#one fieldset input[type=radio], #one label{
+    width: 100px;
+    height: 140px;
+    background-size: cover!important;
+
+}
+
+#one .active{
+    border: solid #00ad00 8px;
+}
+
 label {
     color: #888;
     font-family: helvetica;
@@ -277,7 +302,7 @@ form {
     margin-top: 105px;
 }
 
-input[type='email'], input[type='password']{
+input[type='email'], input[type='password'], input[type='text']{
     display: block;
     margin-bottom: 20px;
     width: 100%;
@@ -291,15 +316,15 @@ input[type='email'], input[type='password']{
     -webkit-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
 }
-input[type='email']:invalid, input[type='password']:invalid{
+input[type='email']:invalid, input[type='password']:invalid, input[type='text']:invalid{
     border-color: red;
     background: #ffe5e5;
 }
-input[type='email']:hover, input[type='password']:hover{
+input[type='email']:hover, input[type='password']:hover, input[type='text']:hover{
     border-color: #e1e1e1;
     background: #f1f1f1;
 }
-input[type='email']:focus, input[type='password']:focus{
+input[type='email']:focus, input[type='password']:focus, input[type='text']{
     background: #e1f8f7;
     border-color: #30c3c0;
 }
@@ -405,5 +430,9 @@ input[type='submit']:hover{
 }
 
 
-
+.profile img{
+    height: 200px;
+    width: auto;
+    margin: auto;
+}
 

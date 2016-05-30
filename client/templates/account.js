@@ -4,7 +4,6 @@ Template.account.onRendered(function() {
         var $this = $(this);
 
         $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            isLastTab();
         });
 
         $('.tab-form-wrap .tab-content fieldset').on('click', function() {
@@ -28,14 +27,10 @@ Template.account.helpers({
        return Meteor.user().profile.Programme.actif;
     },
     niveau: function() {
-        return floor(25 + sqrt(625 + 100 * Meteor.user().profile.Experience)) / 50;
+        return Meteor.user().profile.Experience;
     },
     experience: function() {
-        var tempNiveau = floor(25 + sqrt(625 + 100 * Meteor.user().profile.Experience)) / 50;
-        var tempExperienceFourchette = (25 * tempNiveau * tempNiveau - 25 * tempNiveau) - (25 * (1 + tempNiveau) * (1 + tempNiveau) - 25 * (1 + tempNiveau));
-        var tempExperience = Meteor.user().profile.Experience - (25 * tempNiveau * tempNiveau - 25 * tempNiveau);
-        
-        return tempExperience / tempExperienceFourchette *100;
+        return Meteor.user().profile.Niveau;
     },
     maigrir: function() {
         return Meteor.user().profile.Programme.objectif == "maigrir";
@@ -54,6 +49,9 @@ Template.account.helpers({
     },
     halal: function() {
         return Meteor.user().profile.Recette.halal;
+    },
+    profileimage: function () {
+        return Meteor.user().profile.imgpro;
     }
 
 });
@@ -61,6 +59,10 @@ Template.account.helpers({
 
 
 Template.account.events({
+
+    'click #one fieldset': function(e) {
+        selectPhoto($(e.target));
+    },
 
     'click .logintwitter': function() {
         Meteor.loginWithTwitter();
@@ -75,10 +77,7 @@ Template.account.events({
     },
 
     'click .btnNext' : function() {
-    if(isLastTab())
-        alert('submitting the form...');
-    else
-        nextTab();
+            nextTab();
     },
 
     "click #signup": function(e) {
@@ -163,12 +162,15 @@ Template.account.events({
             objectif  = $('#maigrir').val();
         }
 
+        var pseudo = $("#pseudo").val();
+        var programmeactif = true;
+        var recetteactif = true;
 
-
-            var programmeactif = true;
-            var recetteactif = true;
+        var pro = $('#one .active').val();
 
             Meteor.users.update(Meteor.userId(), {$set: {
+                "profile.imgpro": pro,
+                "profile.pseudo": pseudo,
                 "profile.Recette.halal": halal,
                 "profile.Recette.vegetarien": vegetarien,
                 "profile.Recette.casher": casher,
@@ -201,10 +203,16 @@ Template.account.events({
 function nextTab() {
     var e = $('ul[role="tablist"] li.active').next().find('a[data-toggle="tab"]');
     if(e.length > 0) e.click();
-    isLastTab();
 }
 
-function isLastTab() {
-    var e = $('ul[role="tablist"] li:last').hasClass('active');
-    return e;
+
+function  selectPhoto(e) {
+
+    $('#one fieldset label').removeClass('active');
+    e.addClass('active');
+
+    $this = e.parent().find('input');
+
+    $('#one fieldset input').removeClass('active');
+    $this.addClass('active');
 }

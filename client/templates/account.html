@@ -86,14 +86,48 @@
 
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#one" aria-controls="one" role="tab" data-toggle="tab">1</a>Restriction alimentaire</li>
-                        <li role="presentation"><a href="#two" aria-controls="two" role="tab" data-toggle="tab">2</a>Objectif sportif</li>
+                        <li role="presentation" class="active"><a href="#one" aria-controls="one" role="tab" data-toggle="tab">1</a>Mon compte</li>
+                        <li role="presentation" ><a href="#two" aria-controls="two" role="tab" data-toggle="tab">2</a>Restriction alimentaire</li>
+                        <li role="presentation"><a href="#three" aria-controls="three" role="tab" data-toggle="tab">3</a>Objectif</li>
                     </ul>
 
                     <!-- Tab panes -->
                     <form>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade in active" id="one">
+
+                            <div class="row">
+
+                                <div class="col-xs-6">
+                                    <fieldset>
+                                        <input style="background: url('img/profile/femmea.png')" name="photo" type="radio" id="femmea" value="img/profile/femmea.png">
+                                        <label style="background: url('img/profile/femmea.png')" for="femma"></label>
+                                    </fieldset>
+                                </div>
+                                <div class="col-xs-6">
+                                    <fieldset>
+                                        <input style="background: url('img/profile/hommea.png')" name="photo" type="radio" id="hommea" value="img/profile/hommea.png">
+                                        <label style="background: url('img/profile/hommea.png')" for="femma"></label>
+                                    </fieldset>
+                                </div>
+                                <div class="col-xs-6">
+                                    <fieldset>
+                                        <input style="background: url('img/profile/femmeb.png')" name="photo" type="radio" id="femmeb" value="img/profile/femmeb.png">
+                                        <label style="background: url('img/profile/femmeb.png')" for="femma"></label>
+                                    </fieldset>
+                                </div>
+                                <div class="col-xs-6">
+                                    <fieldset>
+                                        <input style="background: url('img/profile/hommeb.png')" name="photo" type="radio" id="hommeb" value="img/profile/hommeb.png">
+                                        <label style="background: url('img/profile/hommeb.png')" for="femma"></label>
+                                    </fieldset>
+                                </div>
+
+                            </div>
+
+                            <a href="#" class="blk-btn btnNext">next step</a>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="two">
 
                             <fieldset>
                             <input name="halal" type="checkbox" id="halal" value="true">
@@ -109,7 +143,7 @@
                             </fieldset>
                             <a href="#" class="blk-btn btnNext">next step</a>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="two">
+                        <div role="tabpanel" class="tab-pane fade" id="three">
                             <fieldset>
                                 <input name="objectif" type="radio" id="maigrir" value="maigrir">
                                 <label for="maigrir">Maigrir</label>

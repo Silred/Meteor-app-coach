@@ -2,13 +2,97 @@
     <div id="addTraining">
         <a href="/trainings" class="back-desktop"><span class="icon-arrow-left-alt"></span> Back</a>
         <div class="wrapper-admin">
-
+{{# if currentUser }}
             <form>
-                <label>Add a recipe:</label>
-                <input name="trainingName" type="text">
+                <label>Add a training:</label>
                 <button type="submit" class="btn-primary">Save</button>
             </form>
+            <div class="tab-form-wrap" role="tabpanel">
 
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#one" aria-controls="one" role="tab" data-toggle="tab">1</a>Restriction alimentaire</li>
+                    <li role="presentation"><a href="#two" aria-controls="two" role="tab" data-toggle="tab">2</a>Objectif sportif</li>
+                    <li role="presentation"><a href="#three" aria-controls="three" role="tab" data-toggle="tab">3</a>Exercices</li>
+                </ul>
+
+                <!-- Tab panes -->
+                <form>
+                    <div class="tab-content">
+
+                        <div role="tabpanel" class="tab-pane fade in active" id="one">
+
+                            <fieldset>
+                                <label>Nom de l'entrainement:</label>
+                                <input name="trainingName" type="text">
+                            </fieldset>
+                            <fieldset>
+                                <label>Description de l'entrainement (facultatif) :</label>
+                                <textarea name="description" ></textarea>
+                            </fieldset>
+                            <a href="#" class=" btnRed submit-rest btnNext">next step</a>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="two">
+                            <fieldset>
+                                <input name="objectif" type="radio" id="maigrir" value="maigrir">
+                                <label for="maigrir">Maigrir</label>
+                            </fieldset>
+                            <fieldset>
+                                <input name="objectif" type="radio" id="muscler" value="muscler">
+                                <label for="muscler">Se muscler</label>
+                            </fieldset>
+                            <fieldset>
+                                <input name="objectif" type="radio" id="maintient" value="maintient">
+                                <label for="maintient">Maintenir en forme</label>
+                            </fieldset>
+
+                            <a href="#" class=" btnRed submit-rest btnNext">next step</a>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade " id="three">
+
+                            <div id="log"></div>
+                            <div class=" exercice row">
+                            <input type="text" class="col-md-3 exer" id="input_name" placeholder="Nom de l'exercice">
+                            <input type="text" class="col-md-3 exer "  id="input_quant" placeholder="Quantite">
+                            <div onclick="addFunction()" class="col-md-3"  id ="add">Ajouter</div></div>
+                            <input type="hidden" id="final" name="array_final">
+                            <input type="hidden" value="0" name="likes">
+                            <input type="hidden" value="0" name="followed">
+                            <button type="submit" class="btn-primary  btnRed submit-rest btnNext">Save</button>
+                        </div>
+
+
+                    </div>
+                </form>
+
+            </div>
+
+            <script>
+                var result = [];
+                var log = "" ;
+                function addFunction(){
+                    var actual_name = document.getElementById('input_name').value;
+                    var actual_quant = document.getElementById('input_quant').value;
+                    document.getElementById("input_name").value = "";
+                    document.getElementById("input_quant").value = "";
+                    if(actual_name.length !== 0 && actual_quant.length !== 0  ){
+                        result.push([actual_name,actual_quant]);
+                            document.getElementById("log").innerHTML= log + "<div><p>" + result[(result.length -1)][1]+ "  " + result[(result.length-1)][0] + "</p></div><br>"
+                            log = document.getElementById("log").innerHTML;
+                            document.getElementById("final").value = result;
+                    }
+                }
+
+            </script>
+
+            {{ else }}
+
+          <script>
+
+              window.location = "/account";
+          </script>
+
+{{/if}}
         </div>
     </div>
 </template>

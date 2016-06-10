@@ -60,12 +60,16 @@ Template.account.helpers({
 
 Template.account.events({
 
-    'click #one fieldset': function(e) {
-        selectPhoto($(e.target));
+    'click .btn-twitter': function() {
+        Meteor.loginWithTwitter({loginStyle: 'redirect'});
     },
 
-    'click .logintwitter': function() {
-        Meteor.loginWithTwitter();
+    'click .btn-facebook': function() {
+        Meteor.loginWithFacebook({loginStyle: 'redirect'});
+    },
+
+    'click #one fieldset': function(e) {
+        selectPhoto($(e.target));
     },
 
     'click .loginfacebook': function() {

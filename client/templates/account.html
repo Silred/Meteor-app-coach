@@ -76,7 +76,7 @@
 
             <div class="buttons">
                 <button class="submit-rests  logout">Deconexion</button>
-                <button class="submit-rests  modif">Préférences</button>
+                <button class="submit-rests  modif">Réglages</button>
             </div>
 
             {{else}}
@@ -95,6 +95,9 @@
                     <form>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade in active" id="one">
+
+                            <label class="label-spe" for="pseudo">Identifiant</label>
+                            <input id="pseudo" type="text" name="pseudo" required="required">
 
                             <div class="row">
 
@@ -174,7 +177,7 @@
                 <form>
                     <label for="email">Email</label>
                     <input type="email" name="email"/>
-                    <label for="email">Password</label>
+                    <label for="password">Mot de passe</label>
                     <input type="password" name="password"/>
                     <input type="submit" name="action" value="logIn" id="login"/>
                     <input type="submit" name="action" value="signUp" id="signup"/>

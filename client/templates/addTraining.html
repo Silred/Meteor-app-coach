@@ -3,24 +3,20 @@
         <a href="/trainings" class="back-desktop"><span class="icon-arrow-left-alt"></span> Back</a>
         <div class="wrapper-admin">
 {{# if currentUser }}
-            <form>
-                <label>Add a training:</label>
-                <button type="submit" class="btn-primary">Save</button>
-            </form>
             <div class="tab-form-wrap" role="tabpanel">
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#one" aria-controls="one" role="tab" data-toggle="tab">1</a>Restriction alimentaire</li>
-                    <li role="presentation"><a href="#two" aria-controls="two" role="tab" data-toggle="tab">2</a>Objectif sportif</li>
-                    <li role="presentation"><a href="#three" aria-controls="three" role="tab" data-toggle="tab">3</a>Exercices</li>
+                    <li role="presentation" class="active"><a href="#four" aria-controls="four" role="tab" data-toggle="tab">1</a>Restriction alimentaire</li>
+                    <li role="presentation"><a href="#five" aria-controls="five" role="tab" data-toggle="tab">2</a>Objectif sportif</li>
+                    <li role="presentation"><a href="#six" aria-controls="six" role="tab" data-toggle="tab">3</a>Exercices</li>
                 </ul>
 
                 <!-- Tab panes -->
                 <form>
                     <div class="tab-content">
 
-                        <div role="tabpanel" class="tab-pane fade in active" id="one">
+                        <div role="tabpanel" class="tab-pane fade in active" id="four">
 
                             <fieldset>
                                 <label>Nom de l'entrainement:</label>
@@ -28,11 +24,11 @@
                             </fieldset>
                             <fieldset>
                                 <label>Description de l'entrainement (facultatif) :</label>
-                                <textarea name="description" ></textarea>
+                                <input name="description" type="text">
                             </fieldset>
                             <a href="#" class=" btnRed submit-rest btnNext">next step</a>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="two">
+                        <div role="tabpanel" class="tab-pane fade" id="five">
                             <fieldset>
                                 <input name="objectif" type="radio" id="maigrir" value="maigrir">
                                 <label for="maigrir">Maigrir</label>
@@ -48,7 +44,7 @@
 
                             <a href="#" class=" btnRed submit-rest btnNext">next step</a>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade " id="three">
+                        <div role="tabpanel" class="tab-pane fade " id="six">
 
                             <div id="log"></div>
                             <div class=" exercice row">

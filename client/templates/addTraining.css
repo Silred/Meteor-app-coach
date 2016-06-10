@@ -419,4 +419,15 @@ input[type='submit']:hover{
 }
 .exercice .exer{
     padding :0rem;
+    width: 50% ;
+    height: 45px;
+    margin-left: 25%;
+    text-align: center;
+}
+.exercice{
+    border-top:solid #d83e14;
+    border-bottom:solid #d83e14
+}
+#add{
+    text-align: center;
 }

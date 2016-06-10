@@ -21,6 +21,7 @@ Template.addTraining.events({
         Trainings.insert({ trainingName: trainingName, date: new Date,text: description, objectif: objectif,exercices:exercices,likes: likes, followed:followed });
 
         alert('Entrainement sauveguardé !');
+        window.location = "/trainings";
     },
     'click .btnNext' : function() {
 

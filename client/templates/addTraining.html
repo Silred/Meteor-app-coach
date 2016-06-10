@@ -1,5 +1,6 @@
 <template name="addTraining">
     <div id="addTraining">
+        <script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
         <a href="/trainings" class="back-desktop"><span class="icon-arrow-left-alt"></span> Back</a>
         <div class="wrapper-admin">
 {{# if currentUser }}
@@ -20,11 +21,11 @@
 
                             <fieldset>
                                 <label>Nom de l'entrainement:</label>
-                                <input name="trainingName" type="text">
+                                <input style="margin-bottom: 0px" name="trainingName" type="text">
                             </fieldset>
                             <fieldset>
                                 <label>Description de l'entrainement (facultatif) :</label>
-                                <input name="description" type="text">
+                                <input style="margin-bottom: 0px"  name="description" type="text">
                             </fieldset>
                             <a href="#" class=" btnRed submit-rest btnNext">next step</a>
                         </div>

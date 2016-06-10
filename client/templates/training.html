@@ -1,7 +1,14 @@
 <template name="training">
 <div class="training">
-    {{trainingName}}
-{{text}}
+    {{trainingName}}<br>
+{{text}}<br>
+    {{#each exercices}}
+    <li>{{this}}</li>
+    {{/each}}
+    <label>By :</label>{{auteur}}<br>
+    <img style="width: 35px;height: auto" src="{{imgpro}}">
+    <label>Objectives:</label>{{objectif}}<br>
+    <label>Likes:</label>{{likes}}<br>
 </div>
 
 </template>

@@ -6,9 +6,13 @@
 {{# if currentUser }}
             <div class="tab-form-wrap" role="tabpanel">
 
+                <label>NOM: </label>{{currentUser.username}}
+                <div class="img-responsive  profile">
+                    <img class="img-responsive" src="{{currentUser.profile.imgpro}}">
+                </div>
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#four" aria-controls="four" role="tab" data-toggle="tab">1</a>Restriction alimentaire</li>
+                    <li role="presentation" class="active"><a href="#four" aria-controls="four" role="tab" data-toggle="tab">1</a>Presentation</li>
                     <li role="presentation"><a href="#five" aria-controls="five" role="tab" data-toggle="tab">2</a>Objectif sportif</li>
                     <li role="presentation"><a href="#six" aria-controls="six" role="tab" data-toggle="tab">3</a>Exercices</li>
                 </ul>
@@ -54,7 +58,8 @@
                             <div onclick="addFunction()" class="col-md-3"  id ="add">Ajouter</div></div>
                             <input type="hidden" id="final" name="array_final">
                             <input type="hidden" value="0" name="likes">
-                            <input type="hidden" value="0" name="followed">
+                            <input type="hidden" value="{{currentUser.username}}" name="auteur">
+                            <input type="hidden" value="{{currentUser.profile.imgpro}}" name="imgpro">
                             <button type="submit" class="btn-primary  btnRed submit-rest btnNext">Save</button>
                         </div>
 
@@ -76,7 +81,7 @@
                         result.push([actual_name,actual_quant]);
                             document.getElementById("log").innerHTML= log + "<div><p>" + result[(result.length -1)][1]+ "  " + result[(result.length-1)][0] + "</p></div><br>"
                             log = document.getElementById("log").innerHTML;
-                            document.getElementById("final").value = result;
+                            document.getElementById("final").value = JSON.stringify(result);
                     }
                 }
 

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e767fea2-acb7-47d4-b755-aaf08c8608b8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/training.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/addTraining.css" afterPath="$PROJECT_DIR$/client/templates/addTraining.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/addTraining.html" afterPath="$PROJECT_DIR$/client/templates/addTraining.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/addTraining.js" afterPath="$PROJECT_DIR$/client/templates/addTraining.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/training.html" afterPath="$PROJECT_DIR$/client/templates/training.html" />
@@ -29,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="training.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="training.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/templates/training.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.15402038">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -42,8 +40,8 @@
       <file leaf-file-name="addTraining.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/templates/addTraining.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6363635">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.7272725">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -66,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/lib/trainings.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="134" column="75" selection-start-line="134" selection-start-column="75" selection-end-line="134" selection-end-column="75" />
+              <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -75,18 +73,18 @@
       <file leaf-file-name="whats-cooking.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/templates/whats-cooking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="whats-cooking.import.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/templates/whats-cooking.import.less">
+      <file leaf-file-name="recipes.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/templates/recipes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="43" />
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -95,18 +93,28 @@
       <file leaf-file-name="account.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/templates/account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.076923">
-              <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="12" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addTraining.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="account.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/templates/account.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="197" column="11" selection-start-line="197" selection-start-column="11" selection-end-line="197" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addTraining.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/templates/addTraining.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34318182">
-              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            <state vertical-scroll-proportion="-12.75862">
+              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -147,7 +155,6 @@
         <option value="$PROJECT_DIR$/client/templates/account.js" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/footer.php" />
         <option value="$PROJECT_DIR$/client/templates/account.css" />
-        <option value="$PROJECT_DIR$/client/templates/account.html" />
         <option value="$PROJECT_DIR$/lib/recipes.js" />
         <option value="$PROJECT_DIR$/client/templates/whats-cooking.js" />
         <option value="$PROJECT_DIR$/server/publications.js" />
@@ -155,13 +162,14 @@
         <option value="$PROJECT_DIR$/client/templates/Allrecipes.js" />
         <option value="$PROJECT_DIR$/client/templates/recipes.js" />
         <option value="$PROJECT_DIR$/lib/router.js" />
-        <option value="$PROJECT_DIR$/client/templates/recipes.html" />
         <option value="$PROJECT_DIR$/.meteor/local/build/programs/web.browser/merged-stylesheets.css" />
         <option value="$PROJECT_DIR$/client/templates/addTraining.css" />
-        <option value="$PROJECT_DIR$/client/templates/training.html" />
         <option value="$PROJECT_DIR$/client/templates/training.css" />
+        <option value="$PROJECT_DIR$/client/templates/recipes.html" />
+        <option value="$PROJECT_DIR$/client/templates/account.html" />
         <option value="$PROJECT_DIR$/client/templates/addTraining.html" />
         <option value="$PROJECT_DIR$/client/templates/addTraining.js" />
+        <option value="$PROJECT_DIR$/client/templates/training.html" />
       </list>
     </option>
   </component>
@@ -732,14 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/account.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="190" column="33" selection-start-line="190" selection-start-column="33" selection-end-line="190" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/recipes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -796,22 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/recipes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3272933">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/recipes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20572057">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/publications.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46258503">
@@ -836,14 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/whats-cooking.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/templates/training.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -852,10 +828,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/training.html">
+    <entry file="file://$PROJECT_DIR$/lib/trainings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -868,26 +844,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/trainings.js">
+    <entry file="file://$PROJECT_DIR$/client/templates/recipes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="134" column="75" selection-start-line="134" selection-start-column="75" selection-end-line="134" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.20572057">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/templates/account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.076923">
-          <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/account.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="197" column="11" selection-start-line="197" selection-start-column="11" selection-end-line="197" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/recipes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/whats-cooking.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/addTraining.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.75862">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/templates/addTraining.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6363635">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.7272725">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
           <folding>
             <element signature="n#style#0;n#input#0;n#fieldset#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#fieldset#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -895,10 +903,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/addTraining.js">
+    <entry file="file://$PROJECT_DIR$/client/templates/training.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34318182">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.15402038">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding />
         </state>
       </provider>

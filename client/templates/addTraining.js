@@ -14,7 +14,7 @@ Template.addTraining.events({
 
         var trainingName = $(event.target).find('[name=trainingName]').val();
         var description = $(event.target).find('[name=description]').val();
-        var objectif = $(event.target).find('[name=objectif]').val();
+        var objectif = $(event.target).find('[name=check]').val();
         var exercices = $(event.target).find('[id=final]').val();
         console.log(exercices);
         exercices = JSON.parse(exercices);

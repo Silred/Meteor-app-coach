@@ -6,10 +6,7 @@
 {{# if currentUser }}
             <div class="tab-form-wrap" role="tabpanel">
 
-                <label>NOM: </label>{{currentUser.username}}
-                <div class="img-responsive  profile">
-                    <img class="img-responsive" src="{{currentUser.profile.imgpro}}">
-                </div>
+
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#four" aria-controls="four" role="tab" data-toggle="tab">1</a>Presentation</li>
@@ -35,12 +32,13 @@
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="five">
                             <fieldset>
-                                <input name="objectif" type="radio" id="maigrir" value="maigrir">
-                                <label for="maigrir">Maigrir</label>
-                            </fieldset>
-                            <fieldset>
                                 <input name="objectif" type="radio" id="muscler" value="muscler">
                                 <label for="muscler">Se muscler</label>
+                            </fieldset>
+
+                            <fieldset>
+                                <input name="objectif" type="radio" id="maigrir" value="maigrir">
+                                <label for="maigrir">Maigrir</label>
                             </fieldset>
                             <fieldset>
                                 <input name="objectif" type="radio" id="maintient" value="maintient">

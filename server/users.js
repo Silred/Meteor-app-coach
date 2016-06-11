@@ -5,7 +5,8 @@ Accounts.onCreateUser(function(options, user) {
       Recette : {actif : false, casher : false, vegetarien : false, halal: false},
       Experience : 0,
         Niveau : 1,
-        imgpro: ''
+        imgpro: '',
+        pseudo: ''
     };
 
   if (Meteor.users.find().count() === 0)

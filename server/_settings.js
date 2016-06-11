@@ -2,22 +2,19 @@
 //
 // To configure your own Twitter keys, see:
 //   https://github.com/meteor/meteor/wiki/Configuring-Twitter-in-Local-Market
-if (typeof Meteor.settings === 'undefined')
-  Meteor.settings = {};
 
-_.defaults(Meteor.settings, {
-  twitter: {
-    consumerKey: "PLfrg2bUh0oL0asi3R2fumRjm", 
-    secret: "sRI8rnwO3sx7xUAxNWTX0WEDWph3WEBHu6tTdJYQ5wVrJeVCCt"
-  }
+ServiceConfiguration.configurations.remove({
+    service: 'facebook',
+    service: 'twitter'
 });
 
-ServiceConfiguration.configurations.upsert(
-  { service: "twitter" },
-  {
-    $set: {
-      consumerKey: Meteor.settings.twitter.consumerKey,
-      secret: Meteor.settings.twitter.secret
-    }
-  }
-);
+ServiceConfiguration.configurations.insert({
+    service: 'facebook',
+    appId: "823727304393759",
+    secret: '2156a83b4ce18b2a3ae9a7d451a8544a',
+
+    service: 'twitter',
+    consumerKey: "dw5YpSTtqeaPuI43ylHePuV4p",
+    secret: "PRBzQNQrSbsZd4EPIpAbwN5lRL5EnLAsco7DDqEsJ2lsMHA02S"
+});
+

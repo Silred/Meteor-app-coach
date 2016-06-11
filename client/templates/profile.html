@@ -1,11 +1,15 @@
-<template name="Profile">
+<template name="profile">
+    <div class="page profile">
+        {{#nav title=trainingName black=true back=true}}
 
-<div class="img-responsive  profile">
-    <img class="img-responsive" src="{{profileimage}}">
+        {{/nav}}
+
+        <div class="content-scrollable">
+
+            {{#each profiles}}
+            {{username}}
+            {{/each}}
 </div>
-<div class="progress-wrap progress">
-    <div class="niveau">{{niveau}}</div>
-    <div class="progress-bar progress" style="width:{{experience}}"></div>
-</div>
+    </div>
 
 </template>

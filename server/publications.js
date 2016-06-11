@@ -15,11 +15,15 @@ Meteor.publish('feed', function() {
 });
 
 Meteor.publish('trainings', function() {
-  return Trainings.find({}, {sort: {date: -1}, limit: 10});
+  return Trainings.find();
+});
+
+Meteor.publish('allUsers', function() {
+  return Meteor.users.find({}, {fields:{username:1,emails:1}})
 });
 
 Meteor.publish('recipes', function() {
-  return Recipes.find({}, {sort: {date: -1}, limit: 10});
+  return Recipes.find();
 });
 
 Meteor.publish('recipe', function(name) {

@@ -119,7 +119,7 @@ Template.account.events({
             if (err) {
                 alert(err.reason);
             } else {
-                Router.go('home');
+                Router.go('account');
             }
         });
     },

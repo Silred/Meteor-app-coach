@@ -56,7 +56,8 @@
                             <div onclick="addFunction()" class="col-md-3"  id ="add">Ajouter</div></div>
                             <input type="hidden" id="final" name="array_final">
                             <input type="hidden" value="0" name="likes">
-                            <input type="hidden" value="{{currentUser.username}}" name="auteur">
+                            <input type="hidden" value="{{currentUser.username}}" name="email">
+                            <input type="hidden" value="{{currentUser.profile.pseudo}}" name="auteur">
                             <input type="hidden" value="{{currentUser.profile.imgpro}}" name="imgpro">
                             <button type="submit" class="btn-primary  btnRed submit-rest btnNext">Save</button>
                         </div>

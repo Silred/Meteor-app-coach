@@ -1,10 +1,11 @@
 <template name="recipe">
 
   <div class="page recipe {{activeTabClass}}">
-    {{#nav title='Recipe' black=true back=true}}
+    {{#each recipes}}
+
+    {{#nav title=name black=true back=true}}
 
     {{/nav}}
-    {{#each recipes}}
 
 
 {{name}}

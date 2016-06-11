@@ -1,17 +1,20 @@
 <template name="training">
     <div class="page training">
+        {{#each trainings}}
+        {{#nav title=trainingName black=true back=true}}
 
-        {{>nav title="All trainings"}}
+        {{/nav}}
 
         <div class="content-scrollable">
        <h1>TEST</h1>
-            {{#each trainings}}
+
 
 
             {{trainingName}}
 
 
-            {{/each}}
+
         </div>
+        {{/each}}
     </div>
 </template>

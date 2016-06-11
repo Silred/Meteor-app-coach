@@ -3,7 +3,7 @@ var FEATURED_COUNT = 4;
 Template.home.helpers({
   // selects FEATURED_COUNT number of recipes at random
   featuredRecipes: function() {
-    var recipes = _.values(RecipesData);
+    var recipes = _.values(Recipes);
     var selection = [];
     
     for (var i = 0;i < FEATURED_COUNT;i++)
@@ -15,7 +15,9 @@ Template.home.helpers({
   activities: function() {
     return Activities.latest();
   },
-  
+  recipes: function() {
+    return Recipes.find({},{sort: {_id: -1}, limit: 4});
+  },
   latestNews: function() {
     return News.latest();
   }

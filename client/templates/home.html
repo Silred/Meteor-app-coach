@@ -16,30 +16,22 @@
         <span class="title-callout">FIT:</span>
         Toute une communauté pour garder la forme
       </div>
-
-      <h2 class="list-title">Welcome :</h2>
-      <div class="list-subtitle">{{currentUser.username}}</div>
-      <div class="list-activities">
-        {{#each activities}}
-          {{> activity}}
-        {{else}}
-          <div class="wrapper-message">
-            <div class="title-message">No one is cooking yet!</div>
-            <div class="subtitle-message">Share that you made a recipe and it will show up here.</div>
-          </div>
-        {{/each}}
-      </div>
-      <a href="{{pathFor 'trainings'}}" class="btn-primary">See what's cooking</a>
-
-      <h2 class="list-title">Our Favorite Recipes</h2>
-      <div class="list-subtitle">Hand-picked by neighborhood chefs</div>
+      {{# if currentUser }}
+      <h2   style="text-align:center;border-top: solid darkgrey"   class="list-title">Bienvenue :</h2>
+      <div   style="text-align:center;border-bottom: solid darkgrey"  class="list-subtitle">{{currentUser.profile.pseudo}}</div>
+      {{else}}
+      <p class="" style="text-align:center;border-top: solid darkgrey">Connectez-vous pour profiter de l'intégralité de l'experience FIT</p>
+      <a href="{{pathFor 'account'}}"  style="text-align:center;border-bottom: solid darkgrey" class="btn-primary">Mon compte</a>
+      {{/if}}
+        <h2 class="list-title">Recettes populaires</h2>
+      <div class="list-subtitle">Choisies par la communauté</div>
       <div class="list-recipes">
-        {{#each featuredRecipes}}
+        {{#each recipes}}
           {{> recipeItem recipe=this size='small'}}
         {{/each}}
       </div>
 
-      <a href="{{pathFor 'recipes'}}" class="btn-primary">Explore all our recipes</a>
+      <a href="{{pathFor 'recipes'}}" class="btn-primary">Voir toutes les recettes</a>
     </div>
 
   </div>

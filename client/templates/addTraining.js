@@ -14,11 +14,18 @@ Template.addTraining.events({
 
         var trainingName = $(event.target).find('[name=trainingName]').val();
         var description = $(event.target).find('[name=description]').val();
-        var objectif = $(event.target).find('[name=check]').val();
+        if($('#muscler').prop('checked')) {
+            var objectif = "muscler";
+        }
+        if($('#maintient').prop('checked')) {
+            var objectif = "maintient";
+        }
+        if($('#maigrir').prop('checked')) {
+            var objectif = "maigrir";
+        }
+
         var exercices = $(event.target).find('[id=final]').val();
-        console.log(exercices);
         exercices = JSON.parse(exercices);
-        console.log(exercices);
         var likes = $(event.target).find('[name=likes]').val();
         var email = $(event.target).find('[name=email]').val();
         var auteur = $(event.target).find('[name=auteur]').val();

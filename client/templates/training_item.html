@@ -8,7 +8,7 @@
     {{/each}} -->
         <div style="border-bottom: solid #F44336" class="cont">
         <img style="width: 35px;height: auto" src="{{imgpro}}">
-    <label style="color:#F44336">{{auteur}}</label>
+    <a href="/profile/{{id}}"><label style="color:#F44336">{{auteur}}</label></a>
 </div>
 
 </div>
@@ -28,8 +28,8 @@
                 <h5 style="text-align: center; padding-top:3px">Likes: {{likes}}</h5>
             </div></div>
             <div class="col-xs-offset-4 col-xs-4">
-                <button style="text-align:center" href="{{path}}" class="btn-primary">Voir</button>
-                <a  href="/trainings/{{trainingName}}">AZZAEAZE</a>
+                <button style="text-align:center" class="btn-primary">Voir</button>
+                <a  href="/trainings/{{_id}}">AZZAEAZE</a>
             </div>
         </div>
     </div></div>

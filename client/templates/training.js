@@ -2,7 +2,7 @@ Template.training.helpers({
 
 
     trainings: function() {
-        return Trainings.find({ trainingName: Router.current().params.name });
+        return Trainings.find({ _id: Router.current().params._id });
     },
     ready: function() {
         return Router.current().training.ready();
@@ -10,5 +10,5 @@ Template.training.helpers({
     }
 });
 Template.training.onCreated(function() {
-    console.log(Router.current().params.name)
+    console.log(Router.current().params)
 });

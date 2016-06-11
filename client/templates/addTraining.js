@@ -27,10 +27,11 @@ Template.addTraining.events({
         var exercices = $(event.target).find('[id=final]').val();
         exercices = JSON.parse(exercices);
         var likes = $(event.target).find('[name=likes]').val();
+        var id = $(event.target).find('[name=id]').val();
         var email = $(event.target).find('[name=email]').val();
         var auteur = $(event.target).find('[name=auteur]').val();
         var imgpro = $(event.target).find('[name=imgpro]').val();
-        Trainings.insert({ trainingName: trainingName, date: new Date,text: description, objectif: objectif,exercices:exercices,likes: likes, auteur:auteur,email:email,imgpro : imgpro });
+        Trainings.insert({ trainingName: trainingName, date: new Date,text: description, objectif: objectif,exercices:exercices,likes: likes, auteur:auteur,email:email,imgpro : imgpro, id :id });
 
         alert('Entrainement sauveguardé !');
         window.location = "/trainings";

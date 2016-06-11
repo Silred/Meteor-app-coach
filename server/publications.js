@@ -18,6 +18,10 @@ Meteor.publish('trainings', function() {
   return Trainings.find({}, {sort: {date: -1}, limit: 10});
 });
 
+Meteor.publish('recipes', function() {
+  return Recipes.find({}, {sort: {date: -1}, limit: 10});
+});
+
 Meteor.publish('recipe', function(name) {
   check(name, String);
   return [

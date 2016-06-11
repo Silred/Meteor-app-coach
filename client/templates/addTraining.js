@@ -14,13 +14,18 @@ Template.addTraining.events({
 
         var trainingName = $(event.target).find('[name=trainingName]').val();
         var description = $(event.target).find('[name=description]').val();
-        var objectif = $(event.target).find('[name=objectif]').val();
-        var exercices = $(event.target).find('[name=array_final]').val();
+        var objectif = $(event.target).find('[name=check]').val();
+        var exercices = $(event.target).find('[id=final]').val();
+        console.log(exercices);
+        exercices = JSON.parse(exercices);
+        console.log(exercices);
         var likes = $(event.target).find('[name=likes]').val();
-        var followed = $(event.target).find('[name=followed]').val();
-        Trainings.insert({ trainingName: trainingName, date: new Date,text: description, objectif: objectif,exercices:exercices,likes: likes, followed:followed });
+        var auteur = $(event.target).find('[name=auteur]').val();
+        var imgpro = $(event.target).find('[name=imgpro]').val();
+        Trainings.insert({ trainingName: trainingName, date: new Date,text: description, objectif: objectif,exercices:exercices,likes: likes, auteur:auteur,imgpro : imgpro });
 
         alert('Entrainement sauveguardé !');
+        window.location = "/trainings";
     },
     'click .btnNext' : function() {
 
@@ -58,5 +63,4 @@ Template.addTraining.onRendered(function() {
 function nextTab() {
     var e = $('ul[role="tablist"] li.active').next().find('a[data-toggle="tab"]');
     if(e.length > 0) e.click();
-    isLastTab();
 }

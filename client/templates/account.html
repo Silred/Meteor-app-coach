@@ -9,7 +9,18 @@
             {{#if actif}}
 
                 <div class="img-responsive  profile">
-                    <img class="img-responsive" src="{{profileimage}}">
+                    {{#if currentUser.services.facebook}}
+                        <img class="img-responsive" src="{{currentUser.services.twitter.profile_image_url}}">
+                    {{else}}
+                        {{#if currentUser.services.twitter}}
+                            <img class="img-responsive" src="{{currentUser.services.twitter.profile_image_url_https}}">
+
+                        {{else}}
+                            <img class="img-responsive" src="{{profileimage}}">
+                        {{/if}}
+                    {{/if}}
+
+
                 </div>
                 <div class="progress-wrap progress">
                     <div class="niveau">{{niveau}}</div>
@@ -74,6 +85,8 @@
                     <div class="col-xs-4">{{compteur3}}</div>
                 </div>
 
+                {{>shareit}}
+
             <div class="buttons">
                 <button class="submit-rests  logout">Deconexion</button>
                 <button class="submit-rests  modif">Réglages</button>
@@ -99,34 +112,45 @@
                             <label class="label-spe" for="pseudo">Identifiant</label>
                             <input id="pseudo" type="text" name="pseudo" required="required">
 
-                            <div class="row">
+                            {{#if currentUser.services.facebook}}
+                            {{else}}
+                                {{#if currentUser.services.twitter}}
+                                {{else}}
 
-                                <div class="col-xs-6">
-                                    <fieldset>
-                                        <input style="background: url('img/profile/femmea.png')" name="photo" type="radio" id="femmea" value="img/profile/femmea.png">
-                                        <label style="background: url('img/profile/femmea.png')" for="femma"></label>
-                                    </fieldset>
-                                </div>
-                                <div class="col-xs-6">
-                                    <fieldset>
-                                        <input style="background: url('img/profile/hommea.png')" name="photo" type="radio" id="hommea" value="img/profile/hommea.png">
-                                        <label style="background: url('img/profile/hommea.png')" for="femma"></label>
-                                    </fieldset>
-                                </div>
-                                <div class="col-xs-6">
-                                    <fieldset>
-                                        <input style="background: url('img/profile/femmeb.png')" name="photo" type="radio" id="femmeb" value="img/profile/femmeb.png">
-                                        <label style="background: url('img/profile/femmeb.png')" for="femma"></label>
-                                    </fieldset>
-                                </div>
-                                <div class="col-xs-6">
-                                    <fieldset>
-                                        <input style="background: url('img/profile/hommeb.png')" name="photo" type="radio" id="hommeb" value="img/profile/hommeb.png">
-                                        <label style="background: url('img/profile/hommeb.png')" for="femma"></label>
-                                    </fieldset>
-                                </div>
 
-                            </div>
+
+                                    <div class="row">
+
+                                        <div class="col-xs-6">
+                                            <fieldset>
+                                                <input style="background: url('img/profile/femmea.png')" name="photo" type="radio" id="femmea" value="img/profile/femmea.png">
+                                                <label style="background: url('img/profile/femmea.png')" for="femma"></label>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <fieldset>
+                                                <input style="background: url('img/profile/hommea.png')" name="photo" type="radio" id="hommea" value="img/profile/hommea.png">
+                                                <label style="background: url('img/profile/hommea.png')" for="femma"></label>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <fieldset>
+                                                <input style="background: url('img/profile/femmeb.png')" name="photo" type="radio" id="femmeb" value="img/profile/femmeb.png">
+                                                <label style="background: url('img/profile/femmeb.png')" for="femma"></label>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <fieldset>
+                                                <input style="background: url('img/profile/hommeb.png')" name="photo" type="radio" id="hommeb" value="img/profile/hommeb.png">
+                                                <label style="background: url('img/profile/hommeb.png')" for="femma"></label>
+                                            </fieldset>
+                                        </div>
+
+                                    </div>
+                                {{/if}}
+                            {{/if}}
+
+
 
                             <a href="#" class="blk-btn btnNext">next step</a>
                         </div>

@@ -40,3 +40,6 @@ standard-minifier-js
 twbs:bootstrap
 accounts-password
 accounts-facebook
+joshowens:shareit
+cfs:standard-packages
+cfs:gridfs

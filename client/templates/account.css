@@ -257,7 +257,7 @@ button:focus {
     background: #aaaaaa;
 }
 
-#one fieldset{
+.photo-tab fieldset{
     width: 100px;
     text-align: center;
     margin: auto;
@@ -266,22 +266,22 @@ button:focus {
     margin-bottom: 25px;
 }
 
-#one fieldset input[type=radio]{
+.photo-tab fieldset input[type=radio]{
     left: 0!important;
 }
 
-#one fieldset input[type=radio], #one label{
+.photo-tab fieldset input[type=radio], #one label{
     width: 100px;
     height: 140px;
     background-size: cover!important;
 
 }
 
-#one .active{
+.photo-tab .active{
     border: solid #00ad00 8px;
 }
 
-label {
+.photo-tab label {
     color: #888;
     font-family: helvetica;
     text-transform: uppercase;

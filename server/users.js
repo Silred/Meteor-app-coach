@@ -6,6 +6,7 @@ Accounts.onCreateUser(function(options, user) {
       Experience : 0,
         Niveau : 1,
         imgpro: '',
+        imagepro: '',
         pseudo: ''
     };
 

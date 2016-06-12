@@ -7,8 +7,8 @@
         <a href="{{pathFor 'addRecipe'}}">Ajouter une recette</a><br><br><br>
         {{#each recipes}}
 
-        {{title}}
-        <img class="img-responsive" src="{{imgUrl}}">
+        <a href="/recipes/{{_id}}">{{title}}
+        <img class="img-responsive" src="{{imgUrl}}"></a>
 
         {{/each}}
       </div>

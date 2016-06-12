@@ -18,6 +18,9 @@ Template.home.helpers({
   recipes: function() {
     return Recipes.find({},{sort: {_id: -1}, limit: 4});
   },
+  trainings: function() {
+    return Trainings.find({},{sort: {_id: -1}, limit: 4});
+  },
   latestNews: function() {
     return News.latest();
   }

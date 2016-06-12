@@ -27,7 +27,18 @@
       <div class="list-subtitle">Choisies par la communauté</div>
       <div class="list-recipes">
         {{#each recipes}}
-          {{> recipeItem recipe=this size='small'}}
+        <a href="/recipes/{{_id}}">{{title}}</a><br>
+
+        {{/each}}
+      </div>
+
+      <a href="{{pathFor 'recipes'}}" class="btn-primary">Voir toutes les recettes</a>
+      <h2 class="list-title">Entrainements populaires</h2>
+      <div class="list-subtitle">Choisis par la communauté</div>
+      <div class="list-recipes">
+        {{#each trainings}}
+        <a href="/trainings/{{_id}}">{{trainingName}}</a><br>
+
         {{/each}}
       </div>
 

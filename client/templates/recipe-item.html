@@ -1,6 +1,6 @@
 <template name="recipeItem">
   <a class="item-recipe {{highlightedClass}}" href="{{path}}">
-    {{#with recipe}}
+<h1>TEST</h1>
       <span class="attribution">
         <span class="title-recipe">{{title}}</span>
         <span class="metadata-recipe">
@@ -8,8 +8,8 @@
           <span class="bookmarks-recipe"><span class="icon-bookmark"></span> {{bookmarkCount}}</span>
         </span>
       </span>
-    {{/with}}
 
-    <img src="{{recipeImage recipe=recipe size=size}}" />
+
+      <img class="img-responsive" src="{{imgUrl}}">
   </a>
 </template>

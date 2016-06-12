@@ -48,6 +48,7 @@ Template.addRecipe.events({
             var objectif = "maigrir";
         }
         var exercices2 = $(event.target).find('[id=final2]').val();
+        console.log(exercices2);
         exercices2 = JSON.parse(exercices2);
         var exercices = $(event.target).find('[id=final]').val();
         exercices = JSON.parse(exercices);

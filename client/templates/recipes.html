@@ -8,11 +8,8 @@
         {{#each recipes}}
 
         {{title}}
-          {{#if highlighted}}
-            {{> recipeItem recipe=this size='large'}}
-          {{else}}
-            {{> recipeItem recipe=this size='small'}}
-          {{/if}}
+        <img class="img-responsive" src="{{imgUrl}}">
+
         {{/each}}
       </div>
     </div>

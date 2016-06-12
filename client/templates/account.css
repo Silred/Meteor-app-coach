@@ -156,11 +156,11 @@ button:focus {
 
 /* Validation Styles */
 .tab-form-wrap .tab-content fieldset.validation-error {
-    border-color: #F44336;
+    border-color: ##d83e14;
 }
 
 .tab-form-wrap .tab-content fieldset.validation-error .input-label {
-    color: #F44336;
+    color: ##d83e14;
 }
 
 .tab-form-wrap .tab-content fieldset .input-label {
@@ -248,7 +248,7 @@ button:focus {
 
 .logout{
     width: 42%;
-    background: #f26e53;
+    background: #d83e14;
 }
 
 
@@ -334,7 +334,7 @@ input[type='email']:hover, input[type='password']:hover, input[type='text']:hove
 
 input[type='submit']{
     border-width: 0;
-    background: #f26e53;
+    background: #d83e14;
     color: white;
     text-transform: uppercase;
     padding: 12px 24px;
@@ -349,7 +349,7 @@ input[type='submit']{
 }
 
 input[type='submit']:hover{
-    background: #f05a3b;
+    background: #d83e14;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
@@ -398,6 +398,28 @@ input[type='submit']:hover{
     animation: checked 200ms 1;
 }
 
+#niveau{
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 1px 9px 1px 9px;
+    rotation: 10deg;
+    border-radius: 50%;
+    background: #d83e14;
+    color: #ffffff;
+}
+
+.progress-wrap{
+    position: relative;
+    overflow: visible;
+}
+
+.progress-bar{
+    background: #000000;
+}
+
 .tab-pane input[type="radio"]:checked ~ label{
     background: #00AD00;
     color: white;
@@ -424,6 +446,10 @@ input[type='submit']:hover{
     }
 }
 
+.progress-wrap, .progress{
+    height: 20px;
+}
+
 .buttons{
     width: 100%;
     min-height: 15px;
@@ -439,3 +465,41 @@ input[type='submit']:hover{
     margin: auto;
 }
 
+#share{
+    position: absolute;
+    bottom: 40px;
+    left: 30%;
+}
+
+#share a{
+    margin: 7px;
+}
+
+.googleplus-share{
+    display: none;
+}
+
+.profile-reg{
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.picture{
+    font-size: 50px;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+#pseudo{
+    padding: 5px;
+}
+
+.blk-btn{
+    background: #d83e14!important;
+}
+
+.tab-content{
+    min-height: 240px!important;
+}

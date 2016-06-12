@@ -23,14 +23,18 @@ Template.account.onRendered(function() {
 
 Template.account.helpers({
 
+    shareData: function() {
+        return { title: "Je suis niveau "+ Meteor.user().profile.Niveau + " dans FIT, l'application pour vous maintenir en forme !"  }
+    },
+
     actif: function() {
        return Meteor.user().profile.Programme.actif;
     },
     niveau: function() {
-        return Meteor.user().profile.Experience;
+        return Meteor.user().profile.Niveau;
     },
     experience: function() {
-        return Meteor.user().profile.Niveau;
+        return Meteor.user().profile.Experience;
     },
     maigrir: function() {
         return Meteor.user().profile.Programme.objectif == "maigrir";

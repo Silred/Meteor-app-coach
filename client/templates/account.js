@@ -23,6 +23,10 @@ Template.account.onRendered(function() {
 
 Template.account.helpers({
 
+    pseudo: function(){
+        return Meteor.user().profile.pseudo;
+    },
+
     shareData: function() {
         return { title: "Je suis niveau "+ Meteor.user().profile.Niveau + " dans FIT, l'application pour vous maintenir en forme !"  }
     },
@@ -209,6 +213,8 @@ Template.account.events({
         }
 
         var pseudo = $("#pseudo").val();
+
+
         var programmeactif = true;
         var recetteactif = true;
 

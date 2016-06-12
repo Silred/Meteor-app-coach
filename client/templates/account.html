@@ -112,7 +112,7 @@
                         <div role="tabpanel" class="tab-pane fade in active photo-tab" id="one">
 
                             <label class="label-spe" for="pseudo">Identifiant</label>
-                            <input id="pseudo" type="text" name="pseudo" required="required">
+                            <input id="pseudo" type="text" name="pseudo" value="{{#if pseudo}}{{pseudo}}{{/if}}">
 
                             {{#if currentUser.services.facebook}}
                             {{else}}
@@ -179,7 +179,7 @@
                         <div role="tabpanel" class="tab-pane fade" id="three">
                             <fieldset>
                                 <input name="objectif" type="radio" id="maigrir" value="maigrir">
-                                <label for="maigrir">Maigrir</label>
+                                <label for="maigrir">Mincir</label>
                             </fieldset>
                             <fieldset>
                                 <input name="objectif" type="radio" id="muscler" value="muscler">

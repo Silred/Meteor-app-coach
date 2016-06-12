@@ -156,11 +156,11 @@ button:focus {
 
 /* Validation Styles */
 .tab-form-wrap .tab-content fieldset.validation-error {
-    border-color: ##d83e14;
+    border-color: #d83e14;
 }
 
 .tab-form-wrap .tab-content fieldset.validation-error .input-label {
-    color: ##d83e14;
+    color: #d83e14;
 }
 
 .tab-form-wrap .tab-content fieldset .input-label {
@@ -246,6 +246,10 @@ button:focus {
     transition: all ease-in-out 0.2s;
 }
 
+.submit-rest{
+    background: #d83e14!important;
+}
+
 .logout{
     width: 42%;
     background: #d83e14;
@@ -278,7 +282,7 @@ button:focus {
 }
 
 .photo-tab .active{
-    border: solid #00ad00 8px;
+    border: solid #f26e53 8px!important;
 }
 
 .photo-tab label {
@@ -391,9 +395,9 @@ input[type='submit']:hover{
 }
 
 .tab-pane input[type="checkbox"]:checked ~ label{
-    background: #00AD00;
+    background: #f26e53!important;
     color: white;
-    box-shadow: 0 .1rem .45rem 0 rgba(0,0,0,1);
+    box-shadow: none!important;
     transform: scale(1.25);
     animation: checked 200ms 1;
 }
@@ -421,9 +425,9 @@ input[type='submit']:hover{
 }
 
 .tab-pane input[type="radio"]:checked ~ label{
-    background: #00AD00;
+    background: #f26e53!important;
     color: white;
-    box-shadow: 0 .1rem .45rem 0 rgba(0,0,0,1);
+    box-shadow: none!important;
     transform: scale(1.25);
     animation: checked 200ms 1;
 }

@@ -6,6 +6,8 @@
       <div class="list-recipes">
         <a href="{{pathFor 'addRecipe'}}">Ajouter une recette</a><br><br><br>
         {{#each recipes}}
+
+        {{title}}
           {{#if highlighted}}
             {{> recipeItem recipe=this size='large'}}
           {{else}}

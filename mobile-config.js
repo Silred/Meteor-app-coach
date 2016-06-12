@@ -1,7 +1,7 @@
 App.info({
-  name: 'Local Market',
-  description: 'A recipe sharing app made in Meteor.',
-  author: 'Percolate Studio Team',
+  name: 'Fit',
+  description: 'Application de coaching par vous et pour vous.',
+  author: 'IIM',
   email: 'us@percolatestudio.com',
   website: 'http://percolatestudio.com',
   version: '0.0.1'

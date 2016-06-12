@@ -1,9 +1,10 @@
 <template name="recipes">
   <div class="page recipes">
-    {{> nav title='Recipes' black=true}}
+    {{> nav title='Recettes' black=true}}
 
     <div class="content-scrollable">
       <div class="list-recipes">
+        <a href="{{pathFor 'addRecipe'}}">Ajouter une recette</a><br><br><br>
         {{#each recipes}}
           {{#if highlighted}}
             {{> recipeItem recipe=this size='large'}}

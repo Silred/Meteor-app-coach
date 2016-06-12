@@ -59,6 +59,15 @@ Template.account.helpers({
         }
     },
 
+    upload: function() {
+        if (Meteor.user().profile.imagepro == ''){
+            return false
+        }
+        else{
+            return true
+        }
+    },
+
     "files": function(){
         return S3.collection.find();
     }
@@ -69,17 +78,23 @@ Template.account.helpers({
 
 Template.account.events({
 
-    'change .file_bag': function(event, template) {
-        var files = $("input.file_bag")[0].files
+    'click .picture': function(event, template) {
 
-        S3.upload({
-            files:files,
-            path:"subfolder"
-        },function(e,r){
-            Meteor.users.update(Meteor.userId(), {$set: {
-                "profile.imagepro": r.url}
+        MeteorCameraUI.getPicture( {width: 200, height:200}, function(error,uriData){
+
+            S3.upload({
+                file:uriData,
+                path:"subfolder",
+                encoding: "base64"
+            },function(e,r){
+                Meteor.users.update(Meteor.userId(), {$set: {
+                    "profile.imagepro": r.url}
+                });
             });
+
         });
+
+        
     },
 
     'click .btn-twitter': function() {

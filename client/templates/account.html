@@ -117,8 +117,11 @@
                                 {{#if currentUser.services.twitter}}
                                 {{else}}
 
-                                    <input type="file" class="file_bag">
+                                    <button class="picture">Prennez une photo</button>
 
+                                {{#if upload}}
+                                    <img class="img-responsive" src="{{profileimage}}">
+                                    {{else}}
                                     <div class="row">
 
                                         <div class="col-xs-6">
@@ -147,6 +150,7 @@
                                         </div>
 
                                     </div>
+                                    {{/if}}
                                 {{/if}}
                             {{/if}}
 

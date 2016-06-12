@@ -43,3 +43,9 @@ accounts-facebook
 joshowens:shareit
 cfs:standard-packages
 cfs:gridfs
+cfs:filesystem
+cfs:s3
+ecmascript
+edgee:slingshot
+fortawesome:fontawesome
+lepozepo:s3

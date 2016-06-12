@@ -51,7 +51,16 @@ Template.account.helpers({
         return Meteor.user().profile.Recette.halal;
     },
     profileimage: function () {
-        return Meteor.user().profile.imgpro;
+        if (Meteor.user().profile.imagepro == ''){
+            return Meteor.user().profile.imgpro;
+        }
+        else{
+            return Meteor.user().profile.imagepro;
+        }
+    },
+
+    "files": function(){
+        return S3.collection.find();
     }
 
 });
@@ -60,19 +69,15 @@ Template.account.helpers({
 
 Template.account.events({
 
-    'change .myFileInput': function(event, template) {
-        FS.Utility.eachFile(event, function(file) {
-            Images.insert(file, function (err, fileObj) {
-                if (err){
-                    // handle error
-                } else {
-                    // handle success depending what you need to do
-                    var userId = Meteor.userId();
-                    var imagesURL = {
-                  "profile.image": "cfs/files/images/" + fileObj._id
-                };
-                    Meteor.users.update(userId, {$set: imagesURL});
-                }
+    'change .file_bag': function(event, template) {
+        var files = $("input.file_bag")[0].files
+
+        S3.upload({
+            files:files,
+            path:"subfolder"
+        },function(e,r){
+            Meteor.users.update(Meteor.userId(), {$set: {
+                "profile.imagepro": r.url}
             });
         });
     },
@@ -138,6 +143,7 @@ Template.account.events({
                 alert(err.reason)
             }
         });
+
     },
 
     "click .submit-rest": function(e) {

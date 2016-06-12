@@ -52,7 +52,6 @@
                             <div id="log"></div>
                             <div class=" exercice row">
                             <input type="text" class="col-md-3 exer" id="input_name" placeholder="Nom de l'exercice">
-                            <input type="text" class="col-md-3 exer "  id="input_quant" placeholder="Quantite">
                             <div onclick="addFunction()" class="col-md-3"  id ="add">Ajouter</div></div>
                             <input type="hidden" id="final" name="array_final">
                             <input type="hidden" value="0" name="likes">
@@ -74,16 +73,15 @@
                 var log = "" ;
                 function addFunction(){
                     var actual_name = document.getElementById('input_name').value;
-                    var actual_quant = document.getElementById('input_quant').value;
                     document.getElementById("input_name").value = "";
-                    document.getElementById("input_quant").value = "";
-                    if(actual_name.length !== 0 && actual_quant.length !== 0  ){
-                        result.push([actual_name,actual_quant]);
-                            document.getElementById("log").innerHTML= log + "<div><p>" + result[(result.length -1)][1]+ "  " + result[(result.length-1)][0] + "</p></div><br>"
-                            log = document.getElementById("log").innerHTML;
-                            document.getElementById("final").value = JSON.stringify(result);
+                    if(actual_name.length !== 0){
+                        result.push([actual_name]);
+                        document.getElementById("log").innerHTML= log + "<div><p>" +  result[(result.length-1)][0] + "</p></div><br>"
+                        log = document.getElementById("log").innerHTML;
+                        document.getElementById("final").value = JSON.stringify(result);
                     }
                 }
+
 
             </script>
 

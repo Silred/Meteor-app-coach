@@ -5,10 +5,34 @@ Template.addRecipe.helpers({
 
     latestNews: function() {
         return News.latest();
+    },
+
+    "files": function(){
+        return S3.collection.find();
     }
 });
 
+var urlImage = '';
+
 Template.addRecipe.events({
+
+    'click .picture': function(event, template) {
+
+        MeteorCameraUI.getPicture( {width: 200, height:200}, function(error,uriData){
+
+            S3.upload({
+                file:uriData,
+                path:"recettes",
+                encoding: "base64"
+            },function(e,r){
+               urlImage =  r.url;
+            });
+
+        });
+
+
+    },
+
     'submit form': function(event) {
         event.preventDefault();
 
@@ -33,7 +57,7 @@ Template.addRecipe.events({
         var auteur = $(event.target).find('[name=auteur]').val();
         var imgRecette = "/img/recipes/320x350/spring-animal-cracker-cookies.jpg";
         var imgpro = $(event.target).find('[name=imgpro]').val();
-        Recipes.insert({ title: trainingName, date: new Date,exerpt: description, ingredients: exercices2,directions:exercices,likes: likes, auteur:auteur,email:email,imgpro : imgpro, id :id, imgRecette: imgRecette });
+        Recipes.insert({ title: trainingName, date: new Date,exerpt: description, ingredients: exercices2,directions:exercices,likes: likes, auteur:auteur,email:email,imgpro : imgpro, id :id, imgRecette: imgRecette, imgUrl: urlImage });
 
         alert('Recette sauveguardé !');
         window.location = "/recipes";

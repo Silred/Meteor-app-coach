@@ -84,7 +84,7 @@ Template.account.events({
 
             S3.upload({
                 file:uriData,
-                path:"subfolder",
+                path:"profile",
                 encoding: "base64"
             },function(e,r){
                 Meteor.users.update(Meteor.userId(), {$set: {

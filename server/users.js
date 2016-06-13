@@ -7,7 +7,8 @@ Accounts.onCreateUser(function(options, user) {
         Niveau : 1,
         imgpro: '',
         imagepro: '',
-        pseudo: ''
+        pseudo: '',
+        followedby:0
     };
   if (Meteor.users.find().count() === 0)
     user.admin = true;

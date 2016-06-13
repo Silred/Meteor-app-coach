@@ -1,3 +1,5 @@
+
+
 Template.profile.helpers({
 
 
@@ -16,4 +18,21 @@ Template.profile.helpers({
     }
 });
 Template.profile.onCreated(function() {
+});
+
+
+Template.profile.events({
+    'click #follow' : function() {
+
+        Meteor.users.update({_id:Router.current().params._id }, {$set: {
+
+            "profile.followedby": "1"
+        }
+
+        });
+/**
+Meteor.users.update({_id:Router.current().params._id },{ $inc: {followedby: 1} } );
+*/
+console.log("test")
+    }
 });

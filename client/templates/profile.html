@@ -6,12 +6,17 @@
 
         <div class="content-scrollable">
 {{#if currentUser}}
-
+            <h1>co</h1>
+            <button class="btn-danger" id="follow"></button>
+            {{else}}
+            <h1>pas co</h1>
+{{/if}}
             {{#each profiles}}<br>
 
             Mail : {{username}}<br>
             Username : {{profile.pseudo}}<br>
             Niveau: {{profile.Niveau}}<br>
+            Suivi par : {{profile.followedby}}<br>
             {{#if profile.imgpro.length}}
             <img src="../{{profile.imgpro}}">
             {{else}}

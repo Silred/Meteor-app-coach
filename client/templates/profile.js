@@ -12,6 +12,12 @@ Template.profile.helpers({
     recipes: function() {
         return Recipes.find({ id: Router.current().params._id});
     },
+    isfollowing: function(){
+        var following = Meteor.users.findOne({_id: Meteor.userId()}).profile.following;
+        console.log(following);
+        var currentFollowings = UserUtils.checkIfFollowing(following,Router.current().params._id);
+        return currentFollowings;
+    },
     ready: function() {
         return Router.current().profile.ready();
 
@@ -23,7 +29,6 @@ Template.profile.onCreated(function() {
 
 Template.profile.events({
     'click #follow' : function() {
-var following = $("#following").val();
 
         Meteor.users.update({_id:Router.current().params._id }, {$inc: {
 
@@ -36,5 +41,21 @@ var following = $("#following").val();
        }
 
        });
+    },
+    'click #unfollow' : function() {
+
+        Meteor.users.update({ _id: Meteor.userId() },{ $pull: {
+            "profile.following": Router.current().params._id
+        }
+
+        });
+        console.log(Router.current().params._id);
+        Meteor.users.update({_id:Router.current().params._id }, {$inc: {
+
+            "profile.followedby": -1
+        }
+
+        });
     }
+
 });

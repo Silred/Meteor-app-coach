@@ -6,31 +6,35 @@
 <input type="hidden" value="{{currentUser.profile.following}}" name="following" id="following">
 
         <div class="content-scrollable">
-{{#if currentUser}}
-            <h1>co</h1>
-            <button class="btn-danger" id="follow"></button>
+         {{#if isfollowing}}
+            <button class="btn-danger" id="unfollow">UNFOLLOW</button>
             {{else}}
-            <h1>pas co</h1>
-{{/if}}
+            <button class="btn-danger" id="follow">FOLLOW</button>
+            {{/if}}
+
             {{#each profiles}}<br>
 
-            Mail : {{username}}<br>
             Username : {{profile.pseudo}}<br>
             Niveau: {{profile.Niveau}}<br>
-            Suivi par : {{profile.followedby}}<br>
-            Suit : {{profile.following}}<br>
             {{#if profile.imgpro.length}}
             <img src="../{{profile.imgpro}}">
             {{else}}
             <img src="{{profile.imagepro}}">
             {{/if}}
             {{/each}}<br>
+            <p>{{trainings.count}} entrainement(s) publié(s)</p>
+            <p>{{recipes.count}} recette(s) publiée(s)</p>
             {{#each trainings}}
             {{trainingName}}
+            {{else}}
+            <p>Pas encore d'entrainement publié</p>
             {{/each}}<br><br> <br>
             {{#each recipes}}
             {{title}}
+            {{else}}
+            <p>Pas encore de recette publiée</p>
             {{/each}}
+
 
 </div>
     </div>

@@ -5,11 +5,13 @@
         {{/nav}}
 
         <div class="content-scrollable">
+{{#if currentUser}}
 
             {{#each profiles}}<br>
-           Mail : {{username}}<br>
-           Username : {{profile.pseudo}}<br>
-           Niveau: {{profile.Niveau}}<br>
+
+            Mail : {{username}}<br>
+            Username : {{profile.pseudo}}<br>
+            Niveau: {{profile.Niveau}}<br>
             {{#if profile.imgpro.length}}
             <img src="../{{profile.imgpro}}">
             {{else}}
@@ -22,6 +24,7 @@
             {{#each recipes}}
             {{title}}
             {{/each}}
+
 </div>
     </div>
 

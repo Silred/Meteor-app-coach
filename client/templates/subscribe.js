@@ -7,12 +7,19 @@ Template.subscribe.helpers({
 
         var following = Meteor.users.findOne({_id: Meteor.userId()}).profile.following;
 
-        var currentFollowings = UserUtils.findFollowings(following);
+        var currentFollowings = UserUtils.findFollowingsTrainings(following);
         console.log(currentFollowings);
         return Trainings.find({id: { $in: currentFollowings }});
     },
     recipes: function() {
-        return Recipes.find();
+
+
+        var following = Meteor.users.findOne({_id: Meteor.userId()}).profile.following;
+
+        var currentFollowings = UserUtils.findFollowingsRecipes(following);
+        console.log(currentFollowings);
+        return Recipes.find({id: { $in: currentFollowings }});
+
     },
     ready: function() {
         return Router.current().training.ready();

@@ -4,7 +4,12 @@ Template.subscribe.helpers({
         return Meteor.users.find({ _id: Router.current().params._id });
     },
     trainings: function() {
-        return Trainings.find();
+
+        var following = Meteor.users.findOne({_id: Meteor.userId()}).profile.following;
+
+        var currentFollowings = UserUtils.findFollowings(following);
+        console.log(currentFollowings);
+        return Trainings.find({id: { $in: currentFollowings }});
     },
     recipes: function() {
         return Recipes.find();

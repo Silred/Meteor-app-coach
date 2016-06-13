@@ -449,7 +449,7 @@ input[type='submit']:hover{
     font-weight: bold;
     margin-top: 15px;
     border-radius: 15px;
-    border: 1px solid #343434;
+
 
 }
 .titre-ajout {
@@ -461,9 +461,18 @@ input[type='submit']:hover{
 
 }
 
-.log {
+#log {
 
     background: #eeeeee;
-    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+#log p {
+
+    font-size: 17px;
+    line-height: 20px;
 
 }

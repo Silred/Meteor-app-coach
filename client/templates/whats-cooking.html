@@ -1,13 +1,13 @@
 <template name="trainings">
   <div class="page trainings">
 
-    {{>nav title="All trainings"}}
+    {{>nav title="Tout les entrainements"}}
 
     <div class="content-scrollable">
       <div class="list-trainings">
 
-       <a href="{{pathFor 'addTraining'}}">Ajouter un entrainement</a><br><br><br>
-        {{#each trainings}}
+                 <a href="{{pathFor 'addTraining'}}"><button class="btn button-ajout center-block">Ajouter votre entrainement</button></a><br>
+                {{#each trainings}}
 
 {{>training_item}}
         {{/each}}

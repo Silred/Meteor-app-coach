@@ -1,43 +1,57 @@
 <template name="training_item">
 <div class="training">
-    <div class="trainings-list">
+<div class="trainings-list">
 
 
   <!--  {{#each exercices}}
     <li>{{this}}</li>
     {{/each}} -->
-        <div style="border-bottom: solid #F44336" class="cont">
+    <div class="row ligne1">
+        <div class="col-xs-6 separation">
+            <div class="cont">
             <a href="/profile/{{id}}">
                 {{#if imgpro.length}}
-                <img src="{{imgpro}}">
+                <img src="{{imgpro}}" class="img-responsive img-rounded img-thumbnail-perso2 center-block">
                 {{else}}
-                <img src="{{imagepro}}">
+                <img src="{{imagepro}}" class="img-responsive img-thumbnail-perso center-block">
                 {{/if}}
+                <label style="color:#fff">{{auteur}}</label></a>
 
 
-   <label style="color:#F44336">{{auteur}}</label></a>
-</div>
-
-</div>
-    <div class="row">
-    <div class="col-xs-2"></div>
-        <div class="col-xs-9 ">
-    <div class="talk-bubble">
-        <div class="talktext row">
-            <div class="row zob">
-            <div class="col-xs-8">
-            <h3 class="trainingName">{{trainingName}}</h3>
-            <p>{{text}}</p>
-            </div>
-            <div class="col-xs-4">
-                <img src="img/objectif/{{objectif}}.png" class="img-responsive">
-
-                <h5 style="text-align: center; padding-top:3px">Likes: {{likes}}</h5>
-            </div></div>
-            <div class="col-xs-offset-4 col-xs-4">
-                <a href="/trainings/{{_id}}" class="btn-primary">Voir</a>
             </div>
         </div>
-    </div></div>
-        </div></div>
+
+
+
+        <div class="col-xs-6 separation-gauche">
+            <div class="talk-bubble">
+                <div class="talktext">
+                    <img src="img/objectif/{{objectif}}.png" class="img-responsive center-block">
+
+                    <p class="like">Likes: <span class="chiffre">{{likes}}</span></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="zob">
+                <h3 class="trainingName">{{trainingName}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <p class="description">{{text}}</p>
+        </div>
+    </div>
+        <div class="row zob">
+            <div class="col-xs-offset-4 col-xs-4">
+                <a href="/trainings/{{_id}}" class="btn button center-block">Voir</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 </template>

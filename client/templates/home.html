@@ -5,27 +5,31 @@
 
     <div class="content-scrollable">
       <div class="bg-image home">
-        <h1 class="title-home">
-          <img src="img/app/logo-local.png" alt="Local Market"/>
-        </h1>
-
-
+        <div class="row">
+          <div class="col-xs-8 col-xs-offset-2">
+            <h1 class="image-home">
+              <img src="img/app/logo-local.png" alt="Local Market"/>
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <span class="home-desc"> Toute une communauté pour garder la forme</span>
+          </div>
+        </div>
         <span class="arrow"></span>
       </div>
 
-      <div class="callout-news">
-        <span class="title-callout">FIT:</span>
-        Toute une communauté pour garder la forme
-      </div>
+
       {{# if currentUser }}
-      <h2   style="text-align:center;border-top: solid darkgrey"   class="list-title">Bienvenue :</h2>
-      <div   style="text-align:center;border-bottom: solid darkgrey"  class="list-subtitle">{{currentUser.profile.pseudo}}</div>
+      <h2   style="text-align:center;"   class="home-title">Bienvenue :</h2>
+      <div   style="text-align:center;border-bottom: 4px solid #343434"  class="home-subtitle">{{currentUser.profile.pseudo}}</div>
       {{else}}
-      <p class="" style="text-align:center;border-top: solid darkgrey">Connectez-vous pour profiter de l'intégralité de l'experience FIT</p>
-      <a href="{{pathFor 'account'}}"  style="text-align:center;border-bottom: solid darkgrey" class="btn-primary">Mon compte</a>
+      <p class="" style="text-align:center;">Connectez-vous pour profiter de l'intégralité de l'experience FIT</p>
+      <a href="{{pathFor 'account'}}"  style="text-align:center;border-bottom: 4px solid #343434" class="boutton-home">Mon compte</a>
       {{/if}}
         <h2 class="list-title">Recettes populaires</h2>
-      <div class="list-subtitle">Choisies par la communauté</div>
+      <div class="home-subtitle2">Choisies par la communauté</div>
       <div class="list-recipes">
         {{#each recipes}}
         <a href="/recipes/{{_id}}">{{title}}</a><br>
@@ -33,9 +37,10 @@
         {{/each}}
       </div>
 
-      <a href="{{pathFor 'recipes'}}" class="btn-primary">Voir les recettes</a>
+      <a href="{{pathFor 'recipes'}}" class="boutton-home">Voir les recettes</a>
+      <div class="separation-home"></div>
       <h2 class="list-title">Entrainements populaires</h2>
-      <div class="list-subtitle">Choisis par la communauté</div>
+      <div class="home-subtitle2">Choisis par la communauté</div>
       <div class="list-recipes">
         {{#each trainings}}
         <a href="/trainings/{{_id}}">{{trainingName}}</a><br>
@@ -43,7 +48,8 @@
         {{/each}}
       </div>
 
-      <a href="{{pathFor 'trainings'}}" class="btn-primary">Voir les entrainements</a>
+      <a href="{{pathFor 'trainings'}}" class="boutton-home">Voir les entrainements</a>
+      <div class="separation-home2"></div>
     </div>
 
   </div>

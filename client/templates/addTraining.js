@@ -31,7 +31,8 @@ Template.addTraining.events({
         var email = $(event.target).find('[name=email]').val();
         var auteur = $(event.target).find('[name=auteur]').val();
         var imgpro = $(event.target).find('[name=imgpro]').val();
-        Trainings.insert({ trainingName: trainingName, date: new Date,text: description, objectif: objectif,exercices:exercices,likes: likes, auteur:auteur,email:email,imgpro : imgpro, id :id });
+        var imagepro = $(event.target).find('[name=imagepro]').val();
+        Trainings.insert({ trainingName: trainingName, date: new Date,text: description, objectif: objectif,exercices:exercices,likes: likes, auteur:auteur,email:email,imgpro : imgpro,imagepro : imagepro, id :id });
 
         alert('Entrainement sauveguardé !');
         window.location = "/trainings";

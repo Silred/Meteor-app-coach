@@ -7,7 +7,14 @@
     <li>{{this}}</li>
     {{/each}} -->
         <div style="border-bottom: solid #F44336" class="cont">
-            <a href="/profile/{{id}}"> <img style="width: 35px;height: auto" src="{{imgpro}}">
+            <a href="/profile/{{id}}">
+                {{#if imgpro.length}}
+                <img src="{{imgpro}}">
+                {{else}}
+                <img src="{{imagepro}}">
+                {{/if}}
+
+
    <label style="color:#F44336">{{auteur}}</label></a>
 </div>
 

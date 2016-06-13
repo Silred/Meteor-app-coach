@@ -10,7 +10,11 @@
            Mail : {{username}}<br>
            Username : {{profile.pseudo}}<br>
            Niveau: {{profile.Niveau}}<br>
-            <img style="width: 35px; height: auto" src="../{{profile.imgpro}}">
+            {{#if profile.imgpro.length}}
+            <img src="../{{profile.imgpro}}">
+            {{else}}
+            <img src="{{profile.imagepro}}">
+            {{/if}}
             {{/each}}<br>
             {{#each trainings}}
             {{trainingName}}

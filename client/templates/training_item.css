@@ -3,13 +3,19 @@
     margin-bottom: 5px;
 }
 .trainings{
-    background:#e9f0f5
+    background:#e9f0f5;
+
 }
 .right{
     border-left: solid #c5c9c5
 }
 .trainingName{
+
     text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 5px;
+
 }
 
 /* container */
@@ -17,9 +23,7 @@
 .container {
     padding: 5% 5%;
 }
-.zob{
-    border-bottom: solid white
-}
+
 
 /* CSS talk bubble */
 
@@ -28,7 +32,6 @@
     position: relative;
     width: 100%;
     height: auto;
-    background-color: #F44336;
     color:white;
     padding-bottom: 10px;
 }
@@ -38,9 +41,11 @@
 }
 
 .round {
+
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
+
 }
 
 
@@ -298,4 +303,122 @@
     /* remove webkit p margins */
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
+}
+
+
+.cont {
+
+    text-align: center;
+
+  }
+
+
+.separation {
+
+    border-right: 3px solid #343434;
+    min-height: 170px;
+
+
+}
+.separation-gauche {
+
+    border-left: 3px solid #343434;
+    min-height: 170px;
+
+}
+.img-thumbnail-perso {
+
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    width: 100%;
+    padding-left: 13px;
+    padding-top: 5px;
+
+
+}
+.img-thumbnail-perso2 {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+
+    line-height: 1.42857143;
+
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    width: 55%;
+
+
+}
+
+.like {
+
+    text-align: center;
+    padding-top: 27px;
+
+}
+.button {
+
+    background-color: #d83e14;
+    color: white;
+    border-radius: 4px;
+    -webkit-box-shadow: 2px 1px 1px 1px #000;
+    -moz-box-shadow: 2px 1px 1px 1px #000;
+    box-shadow: 2px 1px 4px 1px #000;
+}
+
+.list-trainings {
+
+    background: #FEFEFE;
+
+}
+.training{
+
+
+    background: #eeeeee;
+    margin-bottom: 40px;
+    border-bottom: 6px solid #343434;
+
+}
+.ligne1 {
+
+    background: #F44336;
+    border-top: 6px solid #343434;
+    border-bottom: 6px solid #343434;
+}
+.zob {
+
+    height: 45px;
+
+}
+.description {
+
+
+    min-height: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+}
+.chiffre {
+
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.button-ajout {
+
+    background-color: #d83e14;
+    color: white;
+    border-radius: 4px;
+    -webkit-box-shadow: 2px 1px 1px 1px #000;
+    -moz-box-shadow: 2px 1px 1px 1px #000;
+    box-shadow: 2px 1px 4px 1px #000;
+    margin-top: 20px;
 }

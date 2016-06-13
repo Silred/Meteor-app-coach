@@ -28,7 +28,7 @@
                                 <label>Description de l'entrainement (facultatif) :</label>
                                 <input style="margin-bottom: 0px"  name="description" type="text">
                             </fieldset>
-                            <a href="#" class=" btnRed submit-rest btnNext">next step</a>
+                            <a href="#" class=" btnRed submit-rest btnNext">Étape suivante</a>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="five">
                             <fieldset>
@@ -42,17 +42,25 @@
                             </fieldset>
                             <fieldset>
                                 <input name="objectif" type="radio" id="maintient" value="maintient">
-                                <label for="maintient">Maintenir en forme</label>
+                                <label for="maintient">Maintient en forme</label>
                             </fieldset>
 
-                            <a href="#" class=" btnRed submit-rest btnNext">next step</a>
+                            <a href="#" class=" btnRed submit-rest btnNext">Étape suivante</a>
                         </div>
                         <div role="tabpanel" class="tab-pane fade " id="six">
 
                             <div id="log"></div>
-                            <div class=" exercice row">
-                            <input type="text" class="col-md-3 exer" id="input_name" placeholder="Nom de l'exercice">
-                            <div onclick="addFunction()" class="col-md-3"  id ="add">Ajouter</div></div>
+                            <p class="titre-ajout">Ajoutez la liste des exercices à réaliser :</p>
+                            <div class="row">
+                                <div class="exercice">
+                                    <div class="col-xs-10">
+                                        <input type="text" class="exer" id="input_name" placeholder="Entrez un exercice ici">
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <button type="button" onclick="addFunction()" class="btn button-plus" id ="add">+</button>
+                                    </div>
+                                </div>
+                            </div>
                             <input type="hidden" id="final" name="array_final">
                             <input type="hidden" value="0" name="likes">
                             <input type="hidden" value="{{currentUser.username}}" name="email">
@@ -60,7 +68,7 @@
                             <input type="hidden" value="{{currentUser.profile.imgpro}}" name="imgpro">
                             <input type="hidden" value="{{currentUser.profile.imagepro}}" name="imagepro">
                             <input type="hidden" value="{{currentUser._id}}" name="id">
-                            <button type="submit" class="btn-primary  btnRed submit-rest btnNext">Save</button>
+                            <button type="submit" class="btn-primary  btnRed submit-rest btnNext">Sauvegarder</button>
                         </div>
 
 

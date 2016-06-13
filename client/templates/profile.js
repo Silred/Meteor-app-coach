@@ -23,16 +23,18 @@ Template.profile.onCreated(function() {
 
 Template.profile.events({
     'click #follow' : function() {
+var following = $("#following").val();
 
-        Meteor.users.update({_id:Router.current().params._id }, {$set: {
+        Meteor.users.update({_id:Router.current().params._id }, {$inc: {
 
-            "profile.followedby": "1"
+            "profile.followedby": 1
         }
 
         });
-/**
-Meteor.users.update({_id:Router.current().params._id },{ $inc: {followedby: 1} } );
-*/
-console.log("test")
+       Meteor.users.update({ _id: Meteor.userId() },{ $push: {
+           "profile.following": Router.current().params._id
+       }
+
+       });
     }
 });

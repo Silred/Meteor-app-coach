@@ -1,0 +1,23 @@
+<template name="subscribe">
+    <div class="page subscribe">
+
+        {{>nav title="Mes abonnements"}}
+
+        <div class="content-scrollable">
+            <div class="list-subscribe">
+                Entrainements:
+                {{#each user}}
+                {{profile.following}}
+                {{/each}}
+                {{#each trainings}}
+               {{trainingName}}<br>
+                {{/each}}<br><br>
+                Recettes : <br>
+                {{#each recipes}}
+                {{title}}<br>
+                {{/each}}
+
+            </div>
+        </div>
+    </div>
+</template>

@@ -3,6 +3,7 @@
         {{#nav title=trainingName black=true back=true}}
 
         {{/nav}}
+<input type="hidden" value="{{currentUser.profile.following}}" name="following" id="following">
 
         <div class="content-scrollable">
 {{#if currentUser}}
@@ -17,6 +18,7 @@
             Username : {{profile.pseudo}}<br>
             Niveau: {{profile.Niveau}}<br>
             Suivi par : {{profile.followedby}}<br>
+            Suit : {{profile.following}}<br>
             {{#if profile.imgpro.length}}
             <img src="../{{profile.imgpro}}">
             {{else}}

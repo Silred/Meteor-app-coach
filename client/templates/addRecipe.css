@@ -1,0 +1,53 @@
+.tab-content {
+
+    color: #000;
+
+}
+.button-plus {
+
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 15px;
+
+
+}
+.titre-ajout {
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+
+
+}
+
+#log {
+
+    background: #eeeeee;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+#log p {
+
+    font-size: 17px;
+    line-height: 20px;
+
+}
+#log2 {
+
+    background: #eeeeee;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+#log2 p {
+
+    font-size: 17px;
+    line-height: 20px;
+
+}

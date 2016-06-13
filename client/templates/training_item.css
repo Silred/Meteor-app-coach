@@ -317,13 +317,14 @@
 
     border-right: 3px solid #343434;
     min-height: 170px;
-
+    max-height: 170px;
 
 }
 .separation-gauche {
 
     border-left: 3px solid #343434;
     min-height: 170px;
+    max-height: 170px;
 
 }
 .img-thumbnail-perso {

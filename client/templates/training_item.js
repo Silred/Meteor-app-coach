@@ -26,5 +26,8 @@ Template.training_item.helpers({
     path: function() {
         return Router.path('recipe', { name: this.trainingName },
             { query: { trainingId: this._id } })
+    },
+    objectif: function(){
+        return this.objectif;
     }
-})
+});

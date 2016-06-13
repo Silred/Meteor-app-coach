@@ -1,14 +1,42 @@
 <template name="recipes">
   <div class="page recipes">
-    {{> nav title='Recettes' black=true}}
+    {{> nav title='Toutes les recettes' black=true}}
 
     <div class="content-scrollable">
       <div class="list-recipes">
-        <a href="{{pathFor 'addRecipe'}}">Ajouter une recette</a><br><br><br>
+        <a href="{{pathFor 'addRecipe'}}"><button class="btn button-ajout center-block">Ajouter votre recette</button></a><br>
+
         {{#each recipes}}
 
-        <a href="/recipes/{{_id}}">{{title}}
-        <img class="img-responsive" src="{{imgUrl}}"></a>
+        <div class="row">
+          <div class="col-xs-5">
+            <a href="/recipes/{{_id}}"><img class="img-responsive" src="{{imgUrl}}"></a>
+          </div>
+          <div class="col-xs-7">
+            <div class="titre-recette"><a href="/recipes/{{_id}}">{{title}}</a></div>
+            <div class="description-recette">description recette (dur)</div>
+            <p class="like-recette">Likes: <span class="chiffre">{{likes}}</span></p>
+            <div class="auteur-recette">Posté par: {{auteur}}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="oui">lorem ipsum</div>
+            <div class="oui">lorem ipsum</div>
+            <div class="oui">lorem ipsum</div>
+            <div class="oui">lorem ipsum</div>
+            <div class="oui">lorem ipsum</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="oui">lorem ipsum dolor amet ta grand mère bien sur que c'est du dur wesh</div>
+            <div class="oui">lorem ipsum dolor amet ta grand mère bien sur que c'est du dur wesh</div>
+            <div class="oui">lorem ipsum dolor amet ta grand mère bien sur que c'est du dur wesh</div>
+          </div>
+        </div>
+
+
 
         {{/each}}
       </div>

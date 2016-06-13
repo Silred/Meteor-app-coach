@@ -14,14 +14,15 @@ Template.addTraining.events({
 
         var trainingName = $(event.target).find('[name=trainingName]').val();
         var description = $(event.target).find('[name=description]').val();
-        if($('#muscler').prop('checked')) {
-            var objectif = "muscler";
+        var objectif = "";
+            if($('#muscler').prop('checked')) {
+            objectif = "muscler";
         }
         if($('#maintient').prop('checked')) {
-            var objectif = "maintient";
+            objectif = "maintient";
         }
         if($('#maigrir').prop('checked')) {
-            var objectif = "maigrir";
+            objectif = "maigrir";
         }
 
         var exercices = $(event.target).find('[id=final]').val();

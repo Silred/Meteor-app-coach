@@ -1,6 +1,6 @@
 <template name="recipe">
 
-  <div class="page recipe {{activeTabClass}}">
+  <div class="page">
     {{#each recipes}}
 
     {{#nav title=name black=true back=true}}
@@ -8,7 +8,83 @@
     {{/nav}}
 
 
-{{title}}
+
+        <div class="content-scrollable">
+
+            <div class="description-global">
+
+                <div class="author-training">
+
+                    <div class="col-xs-2">
+
+                       <img src="{{auteur}}" class="img-responsive">
+
+                    </div>
+
+                    <div class="col-xs-10">
+
+                        Pseudo auteur
+
+                    </div>
+
+                </div>
+
+                <div class="description-training">
+
+                    <div class="col-xs-10">
+
+                        Description de la recette
+
+                    </div>
+
+                    <div class="col-xs-2">
+
+            <!--   <img src="img/objectif/{{objectif}}.png" class="img-responsive">    Objectif pour les recettes ???-->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ingredients">
+
+                {{#each exercices}}
+
+                    <div class="ingredient col-xs-6">
+
+                        Ingredient
+
+                    </div>
+
+                {{/each}}
+
+            </div>
+
+            <div class="list-exercices">
+
+                {{#each exercices}}
+
+                    <div class="exercice-single">
+
+                        Étapes de la recette
+
+                    </div>
+
+                {{/each}}
+
+            </div>
+
+
+            <div id="share-training">
+                <div class="share-item">
+                    {{>shareit shareData}}
+                </div>
+            </div>
+
+
+
+        </div>
 
 
 {{/each}}

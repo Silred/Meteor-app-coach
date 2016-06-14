@@ -20,30 +20,84 @@
         <span class="arrow"></span>
       </div>
 
+          {{# if currentUser }}
 
-      {{# if currentUser }}
-      <h2   style="text-align:center;"   class="home-title">Bienvenue :</h2>
-      <div   style="text-align:center;border-bottom: 4px solid #343434"  class="home-subtitle">{{currentUser.profile.pseudo}}</div>
-      {{else}}
-      <p class="" style="text-align:center;">Connectez-vous pour profiter de l'intégralité de l'experience FIT</p>
-      <a href="{{pathFor 'account'}}"  style="text-align:center;border-bottom: 4px solid #343434" class="boutton-home">Mon compte</a>
-      {{/if}}
-        <h2 class="list-title">Recettes populaires</h2>
-      <div class="home-subtitle2">Choisies par la communauté</div>
-      <div class="list-recipes">
-        {{#each recipes}}
-        <a href="/recipes/{{_id}}">{{title}}</a><br>
+              <h2   style="text-align:center;"   class="home-title">Bienvenue :</h2>
+              <div   style="text-align:center;border-bottom: 4px solid #343434"  class="home-subtitle">{{currentUser.profile.pseudo}}</div>
+
+          {{else}}
+
+              <p class="" style="text-align:center;">Connectez-vous pour profiter de l'intégralité de l'experience FIT</p>
+              <a href="{{pathFor 'account'}}"  style="text-align:center;border-bottom: 4px solid #343434" class="boutton-home">Mon compte</a>
+          {{/if}}
+
+              <h2 class="list-title">Recettes populaires</h2>
+              <div class="home-subtitle2">Choisies par la communauté</div>
+              <div class="list-recipes">
+
+          {{#each recipes}}
+
+
+                  <a href="/recipes/{{_id}}">
+
+          <div class="row thumbnail-home">
+            <div class="col-md-12">
+
+              <div class="bandeau"></div>
+              <img src="img/social/like.png" class="img-responsive like-img">
+              <div class="like-home">{{likes}}</div>
+                <a href="/recipes/{{_id}}"><img class="img-responsive img-home" src="{{imgUrl}}"></a>
+
+            </div>
+          </div>
+
+          <div class="row desc-home">
+             <div class="col-xs-12">
+                 <div class="titre-rec-home">{{title}}</div>
+                 <div class="contenu-home">description en dur</div>
+             </div>
+          </div>
+                      </a>
+
 
         {{/each}}
       </div>
 
       <a href="{{pathFor 'recipes'}}" class="boutton-home">Voir les recettes</a>
-      <div class="separation-home"></div>
-      <h2 class="list-title">Entrainements populaires</h2>
+      <h2 class="list-title separation-home3">Entrainements populaires</h2>
       <div class="home-subtitle2">Choisis par la communauté</div>
       <div class="list-recipes">
+
+
         {{#each trainings}}
-        <a href="/trainings/{{_id}}">{{trainingName}}</a><br>
+
+          <a href="/trainings/{{_id}}">
+
+              <div class="row thumbnail-home">
+                  <div class="col-md-12">
+
+                      <div class="bandeau"></div>
+                      <img src="img/social/like.png" class="img-responsive like-img">
+                      <div class="like-home">{{likes}}</div>
+                      {{#if imgpro.length}}
+                      <img src="{{imgpro}}" class="img-responsive img-home">
+                      {{else}}
+                      <img src="{{imagepro}}" class="img-responsive img-home">
+                      {{/if}}
+
+
+                  </div>
+              </div>
+
+              <div class="row desc-home">
+                  <div class="col-xs-12">
+                      <div class="titre-rec-home">{{trainingName}}</div>
+                      <div class="contenu-home">description en dur</div>
+                  </div>
+              </div>
+          </a>
+
+
 
         {{/each}}
       </div>

@@ -5,16 +5,21 @@
 
         <div class="content-scrollable">
             <div class="list-subscribe">
-                Entrainements:
+
                 {{#each user}}
                 {{profile.following}}
-                {{/each}}
+                {{/each}}<br>
+                Entrainements:
                 {{#each trainings}}
                {{trainingName}}<br>
+                {{else}}
+                <p>Pas d'entrainements trouvés</p>
                 {{/each}}<br><br>
                 Recettes : <br>
                 {{#each recipes}}
                 {{title}}<br>
+                {{else}}
+                <p>Pas de recettes trouvées</p>
                 {{/each}}
 
             </div>

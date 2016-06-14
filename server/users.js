@@ -9,7 +9,7 @@ Accounts.onCreateUser(function(options, user) {
         imagepro: '',
         pseudo: '',
         followedby: parseInt(0),
-        following: ["azeaze","ezzazae"]
+        following: []
     };
   if (Meteor.users.find().count() === 0)
     user.admin = true;

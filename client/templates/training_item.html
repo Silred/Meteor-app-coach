@@ -6,52 +6,46 @@
   <!--  {{#each exercices}}
     <li>{{this}}</li>
     {{/each}} -->
-    <div class="row ligne1">
-        <div class="col-xs-6 separation">
-            <div class="cont">
-            <a href="/profile/{{id}}">
-                {{#if imgpro.length}}
-                <img src="{{imgpro}}" class="img-responsive img-rounded img-thumbnail-perso2 center-block">
-                {{else}}
-                <img src="{{imagepro}}" class="img-responsive img-thumbnail-perso center-block">
-                {{/if}}
-                <label style="color:#fff">{{auteur}}</label></a>
-
-
+    <div class="row">
+        <div class="background-ligne1">
+            <div class="col-xs-5">
+                <a href="/profile/{{id}}">
+                    {{#if imgpro.length}}
+                    <img src="{{imgpro}}" class="img-responsive img-rounded img-thumbnail-perso2 center-block background-ligne1-img">
+                    {{else}}
+                    <img src="{{imagepro}}" class="img-responsive img-thumbnail-perso center-block background-ligne1-img">
+                    {{/if}}</a>
             </div>
-        </div>
-
-
-
-        <div class="col-xs-6 separation-gauche">
-            <div class="talk-bubble">
-                <div class="talktext">
-                    <img src="img/objectif/{{objectif}}.png" class="img-responsive center-block">
-
-                    <p class="like">Likes: <span class="chiffre">{{likes}}</span></p>
+            <div class="col-xs-7">
+                <div class="carac-recette">
+                    <div class="titre-recette"><a href="/trainings/{{_id}}">{{trainingName}}</a></div>
+                    <div class="description-recette">{{text}}</div>
+                    <img src="img/objectif/{{objectif}}.png" class="img-responsive center-block objectif-img">
 
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="zob">
-                <h3 class="trainingName">{{trainingName}}</h3>
-            </div>
+
+    <div class="row sous-barre">
+        <div class="col-xs-6 cloison">
+            <a href="/profile/{{id}}"><div class="auteur-recette">Par : <b>{{auteur}}</b></div></a>
+
+        </div>
+        <div class="col-xs-6">
+            <p class="like-recette">Likes: <span class="chiffre">{{likes}}</span></p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="description">{{text}}</p>
+
+
+    <div class="row zob">
+        <div class="col-xs-offset-4 col-xs-4">
+            <a href="/trainings/{{_id}}" class="btn button center-block">Voir</a>
         </div>
     </div>
-        <div class="row zob">
-            <div class="col-xs-offset-4 col-xs-4">
-                <a href="/trainings/{{_id}}" class="btn button center-block">Voir</a>
-            </div>
-        </div>
-    </div>
+
 </div>
+    </div>
+
 
 </template>

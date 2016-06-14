@@ -6,14 +6,40 @@
 <input type="hidden" value="{{currentUser.profile.following}}" name="following" id="following">
 
         <div class="content-scrollable">
-         {{#if isfollowing}}
-            <button class="btn-danger" id="unfollow">UNFOLLOW</button>
-            {{else}}
-            <button class="btn-danger" id="follow">FOLLOW</button>
-            {{/if}}
-            {{#each profiles}}<br>
 
-            Username : {{profile.pseudo}}<br>
+            {{#each profiles}}
+           <div class="side_wrapper">
+              <section class="about-dev">
+                 <header class="profile-card_header">
+                    <div class="profile-card_header-container">
+                       <div class="profile-card_header-imgbox">
+                           {{#if profile.imgpro.length}}
+                           <img style="vertical-align: middle" src="../{{profile.imgpro}}">
+                           {{else}}
+                           <img style="vertical-align: middle"  src="{{profile.imagepro}}">
+                           {{/if}}
+                       </div>
+                       <h1>{{profile.pseudo}} <span>Niveau : {{profile.Niveau}} | Followers : {{profile.followedby}}</span></h1>
+                    </div>
+                 </header>
+                 <div class="profile-card_about">
+                    <h2>Statistiques :</h2>
+                     <p>{{trainings.count}} entrainement(s) publié(s)</p>
+                     <p>{{recipes.count}} recette(s) publiée(s)</p>
+                    <footer class="profile-card_footer">
+                       <div class="social-row">
+
+
+                       </div>
+                        {{#if isfollowing}}
+                        <button class="btn-danger" id="unfollow">UNFOLLOW</button>
+                        {{else}}
+                        <button class="btn-danger" id="follow">FOLLOW</button>
+                        {{/if}}
+                    </footer>
+                 </div>
+              </section>
+           </div>
             Niveau: {{profile.Niveau}}<br>
             Followers: {{profile.followedby}}<br>
             {{#if profile.imgpro.length}}
@@ -22,8 +48,7 @@
             <img src="{{profile.imagepro}}">
             {{/if}}
             {{/each}}<br>
-            <p>{{trainings.count}} entrainement(s) publié(s)</p>
-            <p>{{recipes.count}} recette(s) publiée(s)</p>
+
             {{#each trainings}}
             {{trainingName}}
             {{else}}

@@ -437,15 +437,15 @@
 
     background: #F44336;
     width: 100%;
-    min-height: 112px;
-    max-height: 112px;
+    min-height: 125px;
+    max-height: 125px;
     border-top: 6px solid #343434;
     border-bottom: 6px solid #343434;
 
 }
 .background-ligne1-img {
 
-    height:100px;
+    height:113px;
     width: 100%;
     border-right:6px solid #343434;
 

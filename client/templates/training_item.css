@@ -624,3 +624,139 @@
     height: 65px;
 
 }
+
+/*                  *\
+
+  ---  css single ---
+
+\*                   */
+
+.titre-recette-single {
+
+    Background: #f44336;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 6px solid #343434;
+    line-height: 30px;
+
+
+}
+.img-single {
+
+    width: 100%;
+
+}
+
+.tabs {
+}
+.tabs input[type=radio] {
+    display: none;
+}
+.tabs label {
+    transition: background 0.4s ease-in-out, height 0.2s linear;
+    display: inline-block;
+    cursor: pointer;
+    color: #f44336;
+    width: 20%;
+    height: 3em;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: #fff;
+    text-align: center;
+    line-height: 2.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 1px;
+}
+.tabs label:last-of-type {
+    border-bottom: none;
+}
+.tabs label:hover {
+    background: #259692;
+    color:#ffffff;
+}
+@media screen and (max-width: 1600px) {
+    .tabs label {
+        width: 49%; }
+}
+@media screen and (max-width: 900px) {
+    .tabs label {
+        width: 49%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .tabs label {
+
+
+
+        border-radius: 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    .tabs {
+        margin: 0;
+    }
+}
+
+#tab1:checked + label, #tab2:checked + label, #tab3:checked + label, #tab4:checked + label {
+    background: #f44336;
+    color: #FFFFFF; }
+
+.tab-content {
+    position: absolute;
+    top: -9999px;
+    padding: 10px;
+}
+
+.tab-content-wrapper{
+    background: #fff;
+    border-top: #2EBEB9 5px solid;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+}
+@media screen and (max-width: 600px) {
+    .tab-content-wrapper, .tab1-content-wrapper {
+        border: none;
+        border-radius: 0;
+    }
+}
+
+#tab1:checked ~ .tab-content-wrapper #tab-content-1, #tab2:checked ~ .tab-content-wrapper #tab-content-2, #tab3:checked ~ .tab-content-wrapper #tab-content-3, #tab4:checked ~ .tab-content-wrapper #tab-content-4 {
+    position: relative;
+    top: 0px;
+}
+.liste-single {
+
+
+    padding: 10px 10px;
+    font-size: 18px;
+
+}
+.bandeau2 {
+    width: 120px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 100%);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 100%);
+    background-color: #f44336;
+    -webkit-transform: skew(45deg) translateX(50%);
+    transform: skew(45deg) translateX(50%);
+
+    z-index:1;
+}
+.single-ingredients {
+
+    border: 3px solid #343434;
+    border-radius: 3px;
+    background: #eeeeee;
+    color: #343434;
+
+}

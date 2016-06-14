@@ -50,7 +50,7 @@ Template.profile.events({
 
         });
         console.log(Router.current().params._id);
-        Meteor.users.update({_id:Router.current().params._id }, {$inc: {
+        Meteor.users.update({_id: Router.current().params._id }, {$inc: {
 
             "profile.followedby": -1
         }

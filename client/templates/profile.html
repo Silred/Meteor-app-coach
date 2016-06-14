@@ -11,11 +11,11 @@
             {{else}}
             <button class="btn-danger" id="follow">FOLLOW</button>
             {{/if}}
-
             {{#each profiles}}<br>
 
             Username : {{profile.pseudo}}<br>
             Niveau: {{profile.Niveau}}<br>
+            Followers: {{profile.followedby}}<br>
             {{#if profile.imgpro.length}}
             <img src="../{{profile.imgpro}}">
             {{else}}

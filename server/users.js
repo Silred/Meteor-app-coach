@@ -8,8 +8,8 @@ Accounts.onCreateUser(function(options, user) {
         imgpro: '',
         imagepro: '',
         pseudo: '',
-        followedby: parseInt(0),
-        following: ["azeaze","ezzazae"]
+        followedby: Number(0),
+        following: []
     };
   if (Meteor.users.find().count() === 0)
     user.admin = true;

@@ -1,6 +1,5 @@
 <template name="addRecipe">
     <div id="addRecipe">
-        <script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
         <a href="/recipes" class="back-desktop"><span class="arrow arrow-left decalage"></span></a>
         <div class="wrapper-admin">
             {{# if currentUser }}
@@ -10,8 +9,8 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#four" aria-controls="four" role="tab" data-toggle="tab">1</a>Presentation</li>
-                    <li role="presentation"><a href="#five" aria-controls="five" role="tab" data-toggle="tab">2</a>Ingredients</li>
-                    <li role="presentation"><a href="#six" aria-controls="six" role="tab" data-toggle="tab">3</a>Étapes</li>
+                    <li role="presentation"><a href="#two" aria-controls="two" role="tab" data-toggle="tab">2</a>Ingredients</li>
+                    <li role="presentation"><a href="#three" aria-controls="three" role="tab" data-toggle="tab">3</a>Étapes</li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -31,11 +30,11 @@
 
                             <i class="picture fa fa-camera" aria-hidden="true"></i>
 
-                            <a href="#" class=" btnRed submit-rest btnNext">next step</a>
+                            <a href="#two" aria-controls="two" role="tab" data-toggle="tab" class="blk-btn btnNext">Étape suivante</a>
 
 
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="five">
+                        <div role="tabpanel" class="tab-pane fade" id="two">
 
                             <div id="log2"></div>
                             <p class="titre-ajout">Ajoutez la liste des ingrédiants :</p>
@@ -50,10 +49,12 @@
                                 </div>
                             </div>
                             <input type="hidden" id="final2" name="array_final2">
-                            <a href="#" class=" btnRed submit-rest btnNext">next step</a>
+
+
+                            <a href="#three" aria-controls="three" role="tab" data-toggle="tab" class="blk-btn btnNext">Étape suivante</a>
 
                         </div>
-                        <div role="tabpanel" class="tab-pane fade " id="six">
+                        <div role="tabpanel" class="tab-pane fade" id="three">
 
                             <div id="log"></div>
                             <p class="titre-ajout">Ajoutez la liste des étapes de la recette :</p>
@@ -79,6 +80,8 @@
 
 
                     </div>
+
+
                 </form>
 
             </div>

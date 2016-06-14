@@ -378,6 +378,7 @@
     -moz-box-shadow: 2px 1px 1px 1px #000;
     box-shadow: 2px 1px 4px 1px #000;
     margin-top: 20px;
+    margin-bottom:20px;
 }
 
 .list-trainings {
@@ -401,7 +402,7 @@
 }
 .zob {
 
-    height: 45px;
+    height: 60px;
 
 }
 .description {

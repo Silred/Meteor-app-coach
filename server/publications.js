@@ -26,6 +26,10 @@ Meteor.publish('recipes', function() {
   return Recipes.find();
 });
 
+Meteor.publish('comments', function() {
+    return Comments.find();
+});
+
 Meteor.publish('recipe', function(name) {
   check(name, String);
   return [

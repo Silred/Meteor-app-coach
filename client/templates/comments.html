@@ -1,0 +1,54 @@
+<template name="comments">
+    <div class="page trainings">
+
+
+
+        {{#each recipes}}
+        {{>nav title=title}}
+        {{/each}}
+        {{#each profiles}}
+        {{>nav title=profile.pseudo}}
+        {{/each}}
+        {{#each trainings}}
+        {{>nav title=trainingName}}
+        {{/each}}
+
+        <div class="content-scrollable">
+            <div class="list-comments">
+
+                <div class="wrapper">
+                    <div class="commentBoxfloat">
+                        <form>
+                            <fieldset>
+                                <div class="form_grp">
+                                    <h4 style="text-align:left;padding-bottom:3px;color:white">Ecrire un commentaire:</h4>
+                                    <textarea id="userCmnt" name="text" placeholder="Votre commentaire"></textarea>
+                                </div>
+                                <div class="form_grp">
+
+                                </div>
+                                <input type="hidden" value="{{currentUser.username}}" name="email">
+                                <input type="hidden" value="{{currentUser.profile.pseudo}}" name="auteur">
+                                <input type="hidden" value="{{currentUser.profile.imgpro}}" name="imgpro">
+                                <input type="hidden" value="{{currentUser.profile.imagepro}}" name="imagepro">
+                                <input type="hidden" value="{{currentUser._id}}" name="id">
+                            </fieldset>
+
+                            <button type="submit" style="padding-right:10%;margin-top:3px;text-align: center"  class="btn-primary  btnRed submit-rest btnNext" id="submit">Envoyer</button>
+                        </form>
+                    </div>
+
+                    <div id="cmntContr"></div>
+
+
+                </div>
+
+              {{#each comments}}
+
+                {{text}}
+                {{/each}}
+
+            </div>
+        </div>
+    </div>
+</template>

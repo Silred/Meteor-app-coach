@@ -1,5 +1,5 @@
 <template name="training">
-    <div class="page training">
+    <div class="page training2">
         {{#each trainings}}
         {{#nav title=trainingName black=true back=true}}
 
@@ -11,16 +11,18 @@
             <div class="row">
                 <div class="background-ligne1 decalage2">
                     <div class="col-xs-5">
-
+                        <a href="/profile/{{id}}">
                             {{#if imgpro.length}}
                             <img src="/{{imgpro}}" class="img-responsive img-rounded img-thumbnail-perso2 center-block background-ligne1-img">
                             {{else}}
                             <img src="{{imagepro}}" class="img-responsive img-thumbnail-perso center-block background-ligne1-img">
                             {{/if}}
+                        </a>
                     </div>
                     <div class="col-xs-7">
+
                         <div class="carac-recette">
-                            <div class="titre-recette"><a href="/trainings/{{_id}}">{{trainingName}}</a></div>
+                            <div class="titre-recette">{{trainingName}}</div>
                             <div class="description-recette">{{text}}</div>
                             <img src="/img/objectif/{{objectif}}.png" class="img-responsive center-block objectif-img">
 

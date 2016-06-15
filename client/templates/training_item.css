@@ -472,6 +472,13 @@
     font-weight: bold;
 
 }
+.titre-recette{
+
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
 .sous-barre {
 
     background: #F44336;
@@ -700,7 +707,8 @@
 
 
 
-        border-radius: 0;
+        border-top-right-radius: 2px;
+        border-top-left-radius: 2px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -836,6 +844,15 @@
     font-weight: bold;
     color: #343434;
     margin-bottom: 50px;
+
+}
+.titre-suscribe{
+
+    text-align: center;
+    font-size:22px;
+    font-weight: bold;
+    color: #343434;
+    margin-bottom: 20px;
 
 }
 .decalage2 {

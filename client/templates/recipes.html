@@ -4,8 +4,11 @@
 
     <div class="content-scrollable">
       <div class="list-recipes">
-        <a href="{{pathFor 'addRecipe'}}"><button class="btn button-ajout center-block">Ajouter votre recette</button></a><br>
-
+        <div class="row">
+          <div class="col-xs-12">
+            <a href="{{pathFor 'addRecipe'}}"><button class="btn button-ajout center-block">Ajouter votre recette</button></a><br>
+          </div>
+        </div>
         {{#each recipes}}
 
         <div class="row">

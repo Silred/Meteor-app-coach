@@ -4,10 +4,25 @@
 
     <div class="content-scrollable">
       <div class="list-recipes">
-        <h1 class="titre-book">Contenus favoris :</h1>
-        <a href="/subscribe/{{currentUser._id}}/"><button class="boutton-home">Abonnements</button></a>
-        <a href="/subscribe/{{currentUser._id}}/"><button class="boutton-home">Recettes aimées</button></a>
-        <a href="/subscribe/{{currentUser._id}}/"><button class="boutton-home">Entrainements aimés</button></a>
+        <h1 class="titre-book">Vos contenus favoris :</h1>
+        <div class="row ligne-book">
+          <div class="col-xs-10 col-xs-offset-1">
+            <a href="/subscribe/{{currentUser._id}}/"><button class="boutton-home">Vos abonnements</button></a>
+          </div>
+        </div>
+        <div class="row ligne-book">
+          <div class="col-xs-10 col-xs-offset-1">
+            <a href="/subscribe/{{currentUser._id}}/"><button class="boutton-home">Vos recettes aimées</button></a>
+          </div>
+        </div>
+            <div class="row ligne-book2">
+              <div class="col-xs-10 col-xs-offset-1">
+                <a href="/subscribe/{{currentUser._id}}/"><button class="boutton-home"> Vos entrainements aimés</button></a>
+              </div>
+            </div>
+
+
+
       </div>
     </div>
   </div>

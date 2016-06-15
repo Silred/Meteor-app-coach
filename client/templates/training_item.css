@@ -400,6 +400,7 @@
 .zob {
 
     height: 60px;
+    background: #eeeeee;
 
 }
 .description {
@@ -848,7 +849,7 @@
     font-weight: bold;
     background: #f44336;
     border-bottom-right-radius: 14px;
-    padding-left: 25px;
+
 }
 .profil-absolut {
 
@@ -856,7 +857,7 @@
 
     position: absolute;
     top: 0px;
-    left: 16px;
+    left: 15px;
     height: 85px;
     width: 111px;
     background: #f44336;
@@ -871,4 +872,12 @@
     border-bottom: 1px solid #f44336;
 
 
+}
+.img-profil2 {
+
+
+    height: 100%;
+    width: 90%;
+    border-right:6px solid #f44336;
+    border-bottom: 1px solid #f44336;
 }

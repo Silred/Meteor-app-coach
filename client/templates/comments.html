@@ -1,5 +1,5 @@
 <template name="comments">
-    <div class="page trainings">
+    <div class="page comments">
 
 
 
@@ -7,6 +7,7 @@
         {{>nav title=title}}
         {{/each}}
         {{#each profiles}}
+        <h1>zezae</h1>
         {{>nav title=profile.pseudo}}
         {{/each}}
         {{#each trainings}}
@@ -44,8 +45,24 @@
                 </div>
 
               {{#each comments}}
+                <div id="wrapper">
 
-                {{text}}
+                    <div id="profile">
+                        {{#if imgpro.length}}
+                        <img class="img" style="vertical-align: middle" src="../{{imgpro}}">
+                        {{else}}
+                        <img class="img" style="vertical-align: middle"  src="{{imagepro}}">
+                        {{/if}}
+                        <a href="/profile/{{id}}" class="btn btn_left">{{auteur}}</a>
+
+                        <div class="info">
+                            {{text}}
+                        </div>
+                    </div>
+
+
+                </div>
+
                 {{/each}}
 
             </div>

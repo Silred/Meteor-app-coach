@@ -30,3 +30,4 @@ Template.subscribe.helpers({
 Template.subscribe.onCreated(function() {
     console.log(Meteor.userId())
 });
+

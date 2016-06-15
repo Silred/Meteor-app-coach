@@ -59,7 +59,7 @@ Template.addRecipe.events({
         var imgRecette = "/img/recipes/320x350/spring-animal-cracker-cookies.jpg";
         var imgpro = $(event.target).find('[name=imgpro]').val();
         var imagepro = $(event.target).find('[name=imagepro]').val();
-        Recipes.insert({ title: trainingName, date: new Date,exerpt: description, ingredients: exercices2,directions:exercices,likes: likes, auteur:auteur,email:email,imgpro : imgpro,imagepro:imagepro, id :id, imgRecette: imgRecette, imgUrl: urlImage });
+        Recipes.insert({ title: trainingName, date: new Date,exerpt: description, ingredients: exercices2,directions:exercices,likes: Number(likes), auteur:auteur,email:email,imgpro : imgpro,imagepro:imagepro, id :id, imgRecette: imgRecette, imgUrl: urlImage });
 
         alert('Recette sauveguardé !');
         window.location = "/recipes";

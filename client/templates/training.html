@@ -1,9 +1,11 @@
 <template name="training">
     <div class="page training">
+
         {{#each trainings}}
         {{#nav title=trainingName black=true back=true}}
 
         {{/nav}}
+
 
         <div class="content-scrollable">
 
@@ -39,7 +41,11 @@
                 </div>
             </div>
 
-
+            {{#if isLiked}}
+            <button style="float:none;margin-top:3px;margin-left:10px;" class="btn-danger" id="dislike">Je n'aime plus</button>
+            {{else}}
+            <button style="float:none;margin-top:3px;margin-left:10px;"  class="btn-danger" id="like">J'aime</button>
+            {{/if}}
             <div class="row titre-single-train">
                 <div class="col-xs-12">
                     Les exercices :

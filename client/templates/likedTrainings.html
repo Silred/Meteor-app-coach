@@ -1,0 +1,18 @@
+<template name="likedTrainings">
+    <div class="page likedTrainings">
+
+        {{>nav title="Entrainements aimés"}}
+
+        <div class="content-scrollable">
+            <div class="list-likedTrainings">
+                {{#each trainings}}
+
+
+               {{trainingName}}
+                {{/each}}
+
+            </div>
+        </div>
+    </div>
+
+</template>

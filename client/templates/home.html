@@ -42,7 +42,16 @@
 
           <div class="row thumbnail-home">
             <div class="col-md-12">
-
+                <div class="profil-absolut">
+                    <a href="/profile/{{id}}">
+                        {{#if imgpro.length}}
+                        <img src="{{imgpro}}" class="img-responsive img-rounded img-thumbnail-perso2 center-block img-profil">
+                        {{else}}
+                        <img src="{{imagepro}}" class="img-responsive img-thumbnail-perso center-block img-profil">
+                        {{/if}}
+                    <p class="home-auteur">Par {{auteur}}</p>
+                    </a>
+                </div>
               <div class="bandeau"></div>
               <img src="img/social/like.png" class="img-responsive like-img">
               <div class="like-home">{{likes}}</div>
@@ -58,7 +67,11 @@
              </div>
           </div>
                       </a>
-
+                  <div class="row zob">
+                      <div class="col-xs-offset-4 col-xs-4">
+                          <a href="/recipes/{{_id}}" class="btn button center-block">Voir</a>
+                      </div>
+                  </div>
 
         {{/each}}
       </div>

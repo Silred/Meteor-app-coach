@@ -8,7 +8,7 @@ Template.likedTrainings.helpers({
 
         var currentLikes = UserUtils.findLikedTrainings(liked);
         console.log(currentLikes);
-        return Trainings.find({_id: { $in: currentLikes }});
+        return Trainings.find({_id: { $in: currentLikes }},{sort:{'date': -1}});
     },
     ready: function() {
         return Router.current().trainings.ready();

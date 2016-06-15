@@ -7,10 +7,10 @@ Template.profile.helpers({
         return Meteor.users.find({ _id: Router.current().params._id});
     },
     trainings: function() {
-        return Trainings.find({ id: Router.current().params._id});
+        return Trainings.find({ id: Router.current().params._id},{sort:{'date': -1}});
     },
     recipes: function() {
-        return Recipes.find({ id: Router.current().params._id});
+        return Recipes.find({ id: Router.current().params._id},{sort:{'date': -1}});
     },
     isfollowing: function(){
         var following = Meteor.users.findOne({_id: Meteor.userId()}).profile.following;

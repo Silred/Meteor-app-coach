@@ -9,7 +9,7 @@ Template.subscribe.helpers({
 
         var currentFollowings = UserUtils.findFollowingsTrainings(following);
         console.log(currentFollowings);
-        return Trainings.find({id: { $in: currentFollowings }});
+        return Trainings.find({id: { $in: currentFollowings }},{sort:{'date': -1}});
     },
     recipes: function() {
 
@@ -18,7 +18,7 @@ Template.subscribe.helpers({
 
         var currentFollowings = UserUtils.findFollowingsRecipes(following);
         console.log(currentFollowings);
-        return Recipes.find({id: { $in: currentFollowings }});
+        return Recipes.find({id: { $in: currentFollowings }},{sort:{'date': -1}});
 
     },
     ready: function() {

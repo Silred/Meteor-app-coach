@@ -16,10 +16,10 @@ Template.home.helpers({
     return Activities.latest();
   },
   recipes: function() {
-    return Recipes.find({},{sort: {_id: -1}, limit: 4});
+    return Recipes.find({},{sort: {likes: -1}, limit: 4});
   },
   trainings: function() {
-    return Trainings.find({},{sort: {_id: -1}, limit: 4});
+    return Trainings.find({},{sort: {likes: -1}, limit: 4});
   },
   latestNews: function() {
     return News.latest();

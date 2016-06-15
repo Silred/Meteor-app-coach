@@ -8,7 +8,7 @@ Template.likedRecipes.helpers({
 
         var currentLikes = UserUtils.findLikedRecipes(liked);
         console.log(currentLikes);
-        return Recipes.find({_id: { $in: currentLikes }});
+        return Recipes.find({_id: { $in: currentLikes }},{sort:{'date': -1}});
     },
     ready: function() {
         return Router.current().recipes.ready();

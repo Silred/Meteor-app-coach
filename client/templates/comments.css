@@ -4,9 +4,6 @@
     box-sizing:border-box;
     border:0;
 }
-body{
-    font: 13px/100% tahoma;
-}
 .clear{clear:both;}
 .wrapper{
     width:400px;
@@ -70,4 +67,102 @@ button{
     right:5px;
     background:url(https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/cross-24-16.png) no-repeat center #0e7ec7;
     z-index:2;
+}
+body {
+    background: #34495e;
+}
+
+#wrapper {
+    position: relative;
+    margin: 90px auto;
+    width: 324px;
+}
+
+#profile {
+    position: relative;
+    background: #e74c3c;
+}
+#profile .img {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin: 0 0 0 -42px;
+    width: 76px;
+    height: 76px;
+    border: 4px solid #ecf0f1;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+    -moz-background-size: cover;
+    background:white;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+#profile .btn, #profile .btn:visited {
+    position: absolute;
+    top: 10px;
+    z-index: 10;
+    padding: 0 8px;
+    height: 24px;
+    font-size: 10px;
+    line-height: 24px;
+    font-weight: 100;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+#profile .btn:hover, #profile .btn:visited:hover {
+    color: rgba(255, 255, 255, 0.8);
+    background: #ea6557;
+}
+#profile .btn.btn_left, #profile .btn:visited.btn_left {
+    left: 10px;
+}
+#profile .btn.btn_right, #profile .btn:visited.btn_right {
+    right: 10px;
+}
+#profile .info {
+    position: relative;
+    padding: 42px 22px 18px 22px;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: #ecf0f1;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+}
+#profile .info strong {
+    font-weight: 400;
+}
+
+.pen_data {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+    background: #2c3e50;
+}
+.pen_data a, .pen_data a:visited {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    border-bottom: 1px dotted #94aab0;
+}
+.pen_data a:hover, .pen_data a:visited:hover {
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px dotted #cfd9db;
 }

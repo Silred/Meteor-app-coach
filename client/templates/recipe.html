@@ -31,7 +31,11 @@
 
 
 
-
+            {{#if isLiked}}
+            <button style="float:none;margin-top:3px;margin-left:10px;margin-top:7px;" class="btn-danger" id="dislike">Je n'aime plus</button>
+            {{else}}
+            <button style="float:none;margin-top:3px;margin-left:10px;margin-top:7px;"  class="btn-danger" id="like">J'aime</button>
+            {{/if}}
 
             <div class="tabs">
                 <input type="radio" name="tab" id="tab1" checked="checked">

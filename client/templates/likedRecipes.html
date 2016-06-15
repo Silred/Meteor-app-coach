@@ -1,0 +1,18 @@
+<template name="likedRecipes">
+    <div class="page likedRecipes">
+
+        {{>nav title="Recettes aimées"}}
+
+        <div class="content-scrollable">
+            <div class="list-likedRecipes">
+                {{#each recipes}}
+
+
+                {{title}}
+                {{/each}}
+
+            </div>
+        </div>
+    </div>
+
+</template>

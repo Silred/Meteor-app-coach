@@ -454,7 +454,7 @@
 .carac-recette {
 
     color: white;
-    max-height: 100px;
+    max-height: 125px;
     overflow: auto;
     margin-left: -15px;
 
@@ -641,6 +641,7 @@
     text-transform: uppercase;
     border-bottom: 6px solid #343434;
     line-height: 30px;
+    margin-top: 30px;
 
 
 }
@@ -668,8 +669,8 @@
     text-align: center;
     line-height: 2.3em;
     text-transform: uppercase;
-    font-weight: bold;
     margin-left: 1px;
+
 }
 .tabs label:last-of-type {
     border-bottom: none;
@@ -703,12 +704,18 @@
 
 #tab1:checked + label, #tab2:checked + label, #tab3:checked + label, #tab4:checked + label {
     background: #f44336;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: bold;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
 
-.tab-content {
+.tab-contents {
     position: absolute;
     top: -9999px;
-    padding: 10px;
+
+
 }
 
 .tab-content-wrapper{
@@ -729,6 +736,10 @@
 #tab1:checked ~ .tab-content-wrapper #tab-content-1, #tab2:checked ~ .tab-content-wrapper #tab-content-2, #tab3:checked ~ .tab-content-wrapper #tab-content-3, #tab4:checked ~ .tab-content-wrapper #tab-content-4 {
     position: relative;
     top: 0px;
+    font-size: 19px;
+    font-weight: bold;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 .liste-single {
 
@@ -749,14 +760,84 @@
     background-color: #f44336;
     -webkit-transform: skew(45deg) translateX(50%);
     transform: skew(45deg) translateX(50%);
-
     z-index:1;
 }
 .single-ingredients {
 
-    border: 3px solid #343434;
-    border-radius: 3px;
+    border-top: 3px solid #343434;
+    border-bottom: 3px solid #343434;
     background: #eeeeee;
     color: #343434;
+    margin-top: 20px;
+    padding: 16px 10px;
+    margin-bottom: 70px;
+
+}
+.titre-recette-single a {
+
+    color: #fff;
+
+}
+.titre-single-train {
+
+    text-align: center;
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f44336;
+
+}
+.titre-profil {
+
+
+    font-size: 1.3rem;
+    padding: 20px 35px;
+}
+.liste-single a {
+
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #f44336;
+    padding: 10px 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 3px 10px 0px #000;
+    -moz-box-shadow: 0px 3px 10px 0px #000;
+    box-shadow: 0px 3px 10px 0px #000;
+    margin-bottom: 25px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+.pref {
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+.stat {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.titre-book {
+
+
+
+}
+.decalage2 {
+
+
+    margin-top: 10px;
+
+}
+.profile-card_header {
+
+    margin-top: 10px;
+
 
 }

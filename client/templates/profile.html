@@ -36,29 +36,64 @@
                         {{else}}
                         <button class="btn-danger" id="follow">FOLLOW</button>
                         {{/if}}
+
                     </footer>
+
+
                  </div>
+                  <div class="row titre-profil">
+                    <div class="col-xs-12">
+                        PUBLICATIONS :
+                    </div>
+                  </div>
+
+                  <div class="tabs">
+                      <input type="radio" name="tab" id="tab1" checked="checked">
+                      <label for="tab1" class="tab">Entrainements</label>
+                      <input type="radio" name="tab" id="tab2">
+                      <label for="tab2">Recettes</label>
+
+
+                      <div class="tab-content-wrapper">
+                          <div id="tab-content-1" class="tab-contents">
+                              <ul class="single-ingredients">
+
+                                  {{#each trainings}}
+                                    <li class="liste-single">
+                                        <a href="/trainings/{{_id}}">- {{trainingName}}</a>
+                                    </li>
+                                  {{else}}
+                                  <li>Pas encore d'entrainement publié</li>
+                                  {{/each}}
+
+                              </ul>
+                            </div>
+                              <div id="tab-content-2" class="tab-contents">
+                                  <div class="list-exercices">
+
+                                          <ul class="single-ingredients">
+
+                                              {{#each recipes}}
+                                                  <li class="liste-single">
+                                                      <a href="/recipes/{{_id}}">- {{title}}</a>
+                                                  </li>
+
+                                              {{else}}
+
+                                              <li class="liste-single">Pas encore de recette publiée</li>
+                                              {{/each}}
+
+                                          </ul>
+                                  </div>
+                           </div>
+
+</div>
+                </div>
               </section>
            </div>
-            Niveau: {{profile.Niveau}}<br>
-            Followers: {{profile.followedby}}<br>
-            {{#if profile.imgpro.length}}
-            <img src="../{{profile.imgpro}}">
-            {{else}}
-            <img src="{{profile.imagepro}}">
-            {{/if}}
-            {{/each}}<br>
-
-            {{#each trainings}}
-            {{trainingName}}
-            {{else}}
-            <p>Pas encore d'entrainement publié</p>
-            {{/each}}<br><br> <br>
-            {{#each recipes}}
-            {{title}}
-            {{else}}
-            <p>Pas encore de recette publiée</p>
             {{/each}}
+
+
 
 
 </div>

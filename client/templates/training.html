@@ -17,9 +17,14 @@
                         <a href="/profile/{{id}}">
                             {{#if imgpro.length}}
                             <img src="/{{imgpro}}" class="img-responsive img-rounded img-thumbnail-perso2 center-block background-ligne1-img">
-                            {{else}}
-                            <img src="{{imagepro}}" class="img-responsive img-thumbnail-perso center-block background-ligne1-img">
                             {{/if}}
+                            {{#if imagepro.length}}
+
+                            <img src="{{imagepro}}" class="img-responsive img-thumbnail-perso center-block background-ligne1-img">
+                            {{else}}
+                            <img class="img-responsive img-thumbnail-perso center-block background-ligne1-img" src="{{currentUser.services.twitter.profile_image_url_https}}">
+                            {{/if}}
+
                         </a>
                     </div>
                     <div class="col-xs-7">

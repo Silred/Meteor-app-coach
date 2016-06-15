@@ -853,12 +853,13 @@
 .profil-absolut {
 
 
-    background: #f44336
+
     position: absolute;
     top: 0px;
     left: 16px;
     height: 85px;
     width: 111px;
+    background: #f44336;
 
 
 }
